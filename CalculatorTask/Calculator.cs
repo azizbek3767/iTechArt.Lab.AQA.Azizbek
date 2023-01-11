@@ -1,28 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CalculatorTask
+﻿namespace CalculatorTask
 {
     internal class Calculator
     {
-        public double Add(double FirstNumber, double SecondNumber)
+        public double Add(double firstNumber, double secondNumber)
         {
-            return FirstNumber + SecondNumber;
+            return firstNumber + secondNumber;
         }
-        public double Subtract(double FirstNumber, double SecondNumber)
+        public double Subtract(double firstNumber, double secondNumber)
         {
-            return FirstNumber - SecondNumber;
+            return firstNumber - secondNumber;
         }
-        public double Multiply(double FirstNumber, double SecondNumber)
+        public double Multiply(double firstNumber, double secondNumber)
         {
-            return FirstNumber * SecondNumber;
+            return firstNumber * secondNumber;
         }
-        public double Divide(double FirstNumber, double SecondNumber)
+        public double Divide(double firstNumber, double secondNumber)
         {
-            return FirstNumber / SecondNumber;
+            return firstNumber / secondNumber;
         }
     }
 }

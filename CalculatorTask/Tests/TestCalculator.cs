@@ -1,9 +1,4 @@
 ﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CalculatorTask.Tests
 {
@@ -82,7 +77,6 @@ namespace CalculatorTask.Tests
         [Order(5)]
         [Category("Calculator Test")]
         [Test(Description = "This method tests impossibility of division by 0 of Calculator class", Author = "Azizbek")]
-        //[Ignore("Bug")]
         public void ImpossibilityOfDivisionByZero()
         {
             Assert.That(double.IsInfinity(Calculator.Divide(5, 0)), Is.EqualTo(true));
