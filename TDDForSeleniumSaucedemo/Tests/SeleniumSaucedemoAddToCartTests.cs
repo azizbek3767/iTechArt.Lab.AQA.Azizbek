@@ -4,9 +4,18 @@ using OpenQA.Selenium;
 
 namespace TDDForSeleniumSaucedemo.Tests
 {
+    [TestFixture]
+    [FixtureLifeCycle(LifeCycle.SingleInstance)]
+    [Parallelizable(ParallelScope.Fixtures)]
     internal class SeleniumSaucedemoAddToCartTests
     {
         private IWebDriver _driver;
+
+        [OneTimeSetUp]
+        public void OneTimeSetup()
+        {
+            Console.WriteLine("I am OneTimeSetup");
+        }
 
         [SetUp]
         public void SetupDriver()
@@ -22,7 +31,7 @@ namespace TDDForSeleniumSaucedemo.Tests
             _driver.Quit();
         }
 
-        [Test]
+        [Test(Description = "Testing the Add to cart functionality of Saucedemo", Author = "Azizbek")]
         public void Test()
         {
             var HomePage = new HomePage(_driver);
@@ -37,6 +46,19 @@ namespace TDDForSeleniumSaucedemo.Tests
             HomePage.CartButton.Click();
             Assert.IsTrue(HomePage.IsCartInventoryExists());
             Assert.IsTrue(HomePage.IsRightItemIsAddedToCart());
+        }
+
+        [Test]
+        [Ignore("Ignore a test")]
+        public void IgnoredTest()
+        {
+            Console.WriteLine("I am ignored test");
+        }
+
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
+        {
+            Console.WriteLine("I am OneTimeTearDown");
         }
     }
 }

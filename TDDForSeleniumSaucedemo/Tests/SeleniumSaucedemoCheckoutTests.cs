@@ -4,9 +4,18 @@ using OpenQA.Selenium;
 
 namespace TDDForSeleniumSaucedemo.Tests
 {
+    [SingleThreaded]
+    [TestFixture]
+    [FixtureLifeCycle(LifeCycle.SingleInstance)]
     internal class SeleniumSaucedemoCheckoutTests
     {
         private IWebDriver _driver;
+
+        [OneTimeSetUp]
+        public void OneTimeSetup()
+        {
+            Console.WriteLine("I am OneTimeSetup");
+        }
 
         [SetUp]
         public void SetupDriver()
@@ -43,6 +52,19 @@ namespace TDDForSeleniumSaucedemo.Tests
             Assert.AreEqual(HomePage.GetCurrentUrl(), "https://www.saucedemo.com/checkout-step-two.html");
             HomePage.CheckoutFinishButton.Click();
             Assert.AreEqual(HomePage.GetCurrentUrl(), "https://www.saucedemo.com/checkout-complete.html");
+        }
+
+        [Test]
+        [Ignore("Ignore a test")]
+        public void IgnoredTest()
+        {
+            Console.WriteLine("I am ignored test");
+        }
+
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
+        {
+            Console.WriteLine("I am OneTimeTearDown");
         }
     }
 }

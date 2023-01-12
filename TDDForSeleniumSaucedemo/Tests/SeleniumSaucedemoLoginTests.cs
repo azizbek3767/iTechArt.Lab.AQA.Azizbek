@@ -2,11 +2,21 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 
+[assembly: LevelOfParallelism(3)]
 namespace TDDForSeleniumSaucedemo.Tests
 {
+    [SingleThreaded]
+    [TestFixture]
+    [FixtureLifeCycle(LifeCycle.SingleInstance)]
     internal class SeleniumSaucedemoLoginTests
     {
         private IWebDriver _driver;
+
+        [OneTimeSetUp]
+        public void OneTimeSetup()
+        {
+            Console.WriteLine("I am OneTimeSetup");
+        }
 
         [SetUp]
         public void SetupDriver()
@@ -22,7 +32,9 @@ namespace TDDForSeleniumSaucedemo.Tests
             _driver.Quit();
         }
 
-        [Test]
+        [Retry(3)]
+        [Category("Login")]
+        [Test(Description = "Testing the Login functionality of Saucedemo", Author = "Azizbek")]
         public void Test()
         {
             var HomePage = new HomePage(_driver);
@@ -33,6 +45,19 @@ namespace TDDForSeleniumSaucedemo.Tests
             HomePage.ClickLoginButton();
             Assert.AreEqual(HomePage.GetCurrentUrl(), "https://www.saucedemo.com/inventory.html");
             Assert.IsTrue(HomePage.HomePageLogoExists());
+        }
+
+        [Test]
+        [Ignore("Ignore a test")]
+        public void IgnoredTest()
+        {
+            Console.WriteLine("I am ignored test");
+        }
+
+        [OneTimeTearDown]
+        public void OneTimeTearDown()
+        {
+            Console.WriteLine("I am OneTimeTearDown");
         }
     }
 }
