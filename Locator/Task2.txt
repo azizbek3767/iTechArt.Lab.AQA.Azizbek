@@ -1,0 +1,17 @@
+﻿Задание 2: 
+
+1)	Кнопка поиска отелей: //a[@class = "form-tabs__link" and @href="#hotel"]
+
+2)	Кнопка для смены валюты: //button[@class='q8JaLokdctjkb1_n4aw0']
+
+3)	Логотип: //*[local-name()='svg' and @class='sign_c6e6819 aviasalesSign_67b9b34']/*[local-name()='path']/..
+
+4)	Кнопка для изменения направления: //div[@class='swap-places']
+
+5)	Иконка профиля: //*[local-name()='svg' and @class='icon_0ce8f7f']/*[local-name()='path']/..
+
+6)	Кнопка профиля: //button[@data-test-id='profile-button']
+
+7)	Элемент с актуальной "сегодняшней" датой: //div[@class='calendar-day' and parent::div[contains(@class, 'today')]]
+
+8)	Элемент с конкретной датой текущего месяца (например, 16 февраля): //div[contains(@class,'calendar__day-cell') and @aria-disabled='false']
