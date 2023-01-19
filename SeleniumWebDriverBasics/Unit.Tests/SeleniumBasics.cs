@@ -36,14 +36,14 @@ namespace SeleniumWebDriverBasics.Unit.Tests
             // 3.Из списка производителей выбрать: Apple, Honor
             Actions actions = new Actions(_driver);
             actions.SendKeys(Keys.PageDown).Build().Perform();
-            _driver.FindElement(By.XPath("//*[@id=\"schema-filter\"]/div[5]/div[4]/div[2]/ul/li[1]/label/span[2]")).Click();
-            Assert.That(_driver.FindElement(By.XPath("//*[@id=\'schema-filter\']/div[5]/div[4]/div[2]/ul/li[1]/label/span[1]/input")).Selected, Is.True);
-            _driver.FindElement(By.XPath("//*[@id=\"schema-filter\"]/div[5]/div[4]/div[2]/ul/li[5]/label/span[2]")).Click();
-            Assert.That(_driver.FindElement(By.XPath("//*[@id=\"schema-filter\"]/div[5]/div[4]/div[2]/ul/li[5]/label/span[1]/input")).Selected, Is.True);
+            _driver.FindElement(By.XPath("//*[@id='schema-filter']/div[5]/div[4]/div[2]/ul/li[1]/label/span[2]")).Click();
+            Assert.That(_driver.FindElement(By.XPath("//*[@id='schema-filter']/div[5]/div[4]/div[2]/ul/li[1]/label/span[1]/input")).Selected, Is.True);
+            _driver.FindElement(By.XPath("//*[@id='schema-filter']/div[5]/div[4]/div[2]/ul/li[5]/label/span[2]")).Click();
+            Assert.That(_driver.FindElement(By.XPath("//*[@id='schema-filter']/div[5]/div[4]/div[2]/ul/li[5]/label/span[1]/input")).Selected, Is.True);
 
             // 4.В отобразившемся списке удалить Honor
-            _driver.FindElement(By.XPath("//*[@id=\"schema-filter\"]/div[5]/div[4]/div[2]/ul/li[5]/label/span[2]")).Click();
-            Assert.That(_driver.FindElement(By.XPath("//*[@id=\"schema-filter\"]/div[5]/div[4]/div[2]/ul/li[5]/label/span[1]/input")).Selected, Is.False);
+            _driver.FindElement(By.XPath("//*[@id='schema-filter']/div[5]/div[4]/div[2]/ul/li[5]/label/span[2]")).Click();
+            Assert.That(_driver.FindElement(By.XPath("//*[@id='schema-filter']/div[5]/div[4]/div[2]/ul/li[5]/label/span[1]/input")).Selected, Is.False);
             // Ожидаемый результат: В списке нет моделей с назвнием Honor
             var Phones = _driver.FindElements(By.XPath("//div[@class='schema-product__group']/div/div[3]/div[2]/div/a/span"));
             foreach(var Phone in Phones)
@@ -84,7 +84,7 @@ namespace SeleniumWebDriverBasics.Unit.Tests
 
 
 
-            // The below code is the old version
+            // The below code is the old version 
 
             /*Actions actions = new Actions(_driver);
             actions.SendKeys(Keys.PageDown).Build().Perform();
