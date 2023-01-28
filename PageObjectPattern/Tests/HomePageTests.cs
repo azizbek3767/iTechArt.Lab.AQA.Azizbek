@@ -1,90 +1,61 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.Interactions;
-using OpenQA.Selenium.Support.UI;
-using OpenQA.Selenium;
-using PageObjectPattern.Locators;
+﻿using PageObjectPattern.Locators;
 using PageObjectPattern.Pages;
-using SeleniumExtras.WaitHelpers;
 
 namespace PageObjectPattern.Tests
 {
     [TestFixture]
     internal class HomePageTests : BaseTest
     {
-        private IWebDriver _driver;
-        private IJavaScriptExecutor _executor;
-
         [Test]
         public void Test()
         {
-            var HomePage = new HomePage(_driver);
-
             // 1.Зайти на страницу http://onliner.by/
-            HomePage.Open("http://onliner.by/");
+            HomePage.OpenPage();
             // Ожидаемый результат: Главная страница onliner открылась
-            Assert.AreEqual("https://www.onliner.by/", _driver.Url);
+            Assert.True(HomePage.IsPageOpened, "HomePage should be opened");
 
             // 2.Открыть вкладку «мобильные телефоны»
-            HomePage.MobilePhonesButton.Click();
+            MobilePhonesPage.OpenPage();
             // Ожидаемый результат: Нужная вкладка открыта
-            Assert.AreEqual("https://catalog.onliner.by/mobile", _driver.Url);
+            Assert.True(MobilePhonesPage.IsPageOpened, "MobilePhonesPage should be opened");
 
             // 3.Из списка производителей выбрать: Apple, Honor
-            Actions actions = new Actions(_driver);
-            var AppleManufacturerSpan = _driver.FindElement(HomePageLocators.AppleManufacturerSpanLocator);
-            _executor.ExecuteScript("arguments[0].click();", AppleManufacturerSpan);
-            Assert.That(_driver.FindElement(HomePageLocators.AppleManufacturerInputLocator).Selected, Is.True);
-
-            var HonorManufacturerSpan = _driver.FindElement(HomePageLocators.HonorManufacturerSpanLocator);
-            _executor.ExecuteScript("arguments[0].click();", HonorManufacturerSpan);
-            Assert.That(_driver.FindElement(HomePageLocators.HonorManufacturerInputLocator).Selected, Is.True);
+            MobilePhonesPage.SelectAppleAndHonor();
+            Assert.That(WebDriver.FindElement(HomePageLocators.AppleManufacturerInputLocator).Selected, Is.True);
+            Assert.That(WebDriver.FindElement(HomePageLocators.HonorManufacturerInputLocator).Selected, Is.True);
 
             // 4.В отобразившемся списке удалить Honor
-            _executor.ExecuteScript("arguments[0].click();", HonorManufacturerSpan);
-            Assert.That(_driver.FindElement(HomePageLocators.HonorManufacturerInputLocator).Selected, Is.False);
+            MobilePhonesPage.UnselectHonor();
+            Assert.That(WebDriver.FindElement(HomePageLocators.HonorManufacturerInputLocator).Selected, Is.False);
 
             // Ожидаемый результат: В списке нет моделей с назвнием Honor
-            var Phones = _driver.FindElements(HomePageLocators.PhonesListLocator);
-            foreach (var Phone in Phones)
-            {
-                Assert.That(Phone.Text, Does.Not.Contain("Honor"));
-            }
+            Assert.True(MobilePhonesPage.IsOnlyIphones, "Only Iphones are on the list");
 
             // 5.Из списка оставшихся телефоном выбрать 1-ый и 3-ий (поставить чекбокс)
-            var wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"schema-products\"]/div[2]/div/div[3]/div[2]/div[1]/a/span[contains(text(), 'Apple')]")));
-
-            var FirstItemCheckboxLabel = _driver.FindElement(HomePageLocators.FirstItemCheckboxLabel);
-            _executor.ExecuteScript("arguments[0].click();", FirstItemCheckboxLabel);
-            var FirstItemCheckboxInput = _driver.FindElement(HomePageLocators.FirstItemCheckboxInput);
-            Assert.IsTrue(FirstItemCheckboxInput.Selected);
-
-            var ThirdItemCheckboxLabel = _driver.FindElement(HomePageLocators.ThirdItemCheckboxLabel);
-            _executor.ExecuteScript("arguments[0].click();", ThirdItemCheckboxLabel);
-            var ThirdItemCheckboxInput = _driver.FindElement(HomePageLocators.ThirdItemCheckboxInput);
-            Assert.IsTrue(ThirdItemCheckboxInput.Selected);
+            MobilePhonesPage.SelectFirstAndThirdItemCheckboxes();
+            Assert.IsTrue(MobilePhonesPage.FirstItemCheckboxInput.Selected);
+            Assert.IsTrue(MobilePhonesPage.ThirdItemCheckboxInput.Selected);
 
             //Ожидаемый результат: Проверить, что в сравнении 2 товара
             Assert.That(HomePage.SpanForComparison.Text, Is.EqualTo("2 товара"));
 
             //6.Открыть страницу Сравнения
-            actions.MoveToElement(HomePage.ButtonWithTwoElementsToCompare).Click().Build().Perform();
+            MobilePhonesPage.GoToComparePageWithSelectedItems();
             //Ожидаемый результат: Страница сравнения открыта
-            Assert.AreEqual("https://catalog.onliner.by/compare/appl2bmwlt2+appl2amq6g2", _driver.Url);
+            Assert.True(ComparePage.IsPageOpened, "Compare Page should be opened");
 
             //7.Навести курсор на «Описание» 
             //Ожидаемый результат: Окно с текстом открылось
-            actions.MoveToElement(HomePage.SpanWithOverview).Perform();
+            ComparePage.GoToDefinition();
 
             //8.Проверить что текст в окне равен тексту «Описание
             Assert.That(HomePage.SpanWithOverview.Text, Is.EqualTo("Описание"));
 
             //9.Открыть предыдущую страницу
-            _driver.Navigate().Back();
+            ComparePage.BackToMobilePhonesPage();
             //Ожидаемый результат: Страница со списков телефонов Apple открыта
-            Assert.AreEqual("https://catalog.onliner.by/mobile/apple", _driver.Url);
+            Assert.True(MobilePhonesPage.IsPageOpened, "MobilePhonesPage should be opened");
+            Assert.That(WebDriver.Url.Contains("apple"));
         }
-
-        
     }
 }

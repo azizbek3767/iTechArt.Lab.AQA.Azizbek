@@ -1,27 +1,33 @@
-﻿using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 using PageObjectPattern.Pages;
+using PageObjectPattern.DriverConfigurations;
 
 namespace PageObjectPattern.Tests
 {
     public abstract class BaseTest
     {
-        private IWebDriver _driver;
-        private IJavaScriptExecutor _executor;
+        protected IWebDriver WebDriver { get; private set; }
+        protected IJavaScriptExecutor JSExecutor { get; private set; }
         protected HomePage HomePage { get; private set; }
+        protected MobilePhonesPage MobilePhonesPage { get; private set; }
+        protected ComparePage ComparePage { get; private set; }
+
         [SetUp]
-        public void SetupDriver()
+        public void SetUp()
         {
-            _driver = new ChromeDriver();
-            _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(7);
-            _driver.Manage().Window.Maximize();
-            _executor = (IJavaScriptExecutor)_driver;
+            WebDriver = new WebDriverFactory().GetDriver();
+            WebDriver.Manage().Window.Maximize();
+            WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+
+            HomePage = new HomePage(WebDriver);
+            MobilePhonesPage= new MobilePhonesPage(WebDriver);
+            ComparePage = new ComparePage(WebDriver);
         }
 
         [TearDown]
-        public void TeardownDriver()
+        public void TearDown()
         {
-            _driver.Quit();
+            WebDriver.Quit();
         }
     }
 }

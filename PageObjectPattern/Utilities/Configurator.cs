@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Configuration.Memory;
 
 namespace PageObjectPattern.Utilities
 {
@@ -11,7 +10,6 @@ namespace PageObjectPattern.Utilities
             var builder = new ConfigurationBuilder()
                 .AddJsonFile(path, true, true);
             var config = builder.Build();
-
             return config;
         }
     }
