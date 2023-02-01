@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using PageObjectPattert.Lection.Pages;
 using SeleniumAdvancedPartOne.Locators;
+using SeleniumAdvancedPartOne.Utilities;
 using SeleniumExtras.WaitHelpers;
 using System;
 
@@ -190,16 +191,9 @@ namespace SeleniumAdvancedPartOne.Pages
         public void FillInAndSubmitPromptBox()
         {
             IAlert alert = WebDriver.SwitchTo().Alert();
-            randomString = RandomString(10);
+            randomString = HelperMethods.RandomString(10);
             alert.SendKeys(randomString);
             alert.Accept();
-        }
-        private string RandomString(int length)
-        {
-            var random = new Random();
-            const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-            return new string(Enumerable.Repeat(chars, length)
-                .Select(s => s[random.Next(s.Length)]).ToArray());
         }
         public bool IsPromptResultCorrect
         {
