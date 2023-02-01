@@ -299,24 +299,6 @@ namespace SeleniumAdvancedPartOne.Pages
             }
         }
 
-        public string TextFromFirstFrame
-        {
-            get
-            {
-                WebDriver.SwitchTo().Frame(FirstFrame);
-                return WebDriver.FindElement(By.XPath("//h1[@id=\"sampleHeading\"]")).Text;
-            }
-        }
-        public string TextFromSecondFrame
-        {
-            get
-            {
-                WebDriver.SwitchTo().ParentFrame();
-                WebDriver.SwitchTo().Frame(SecondFrame);
-                return WebDriver.FindElement(By.XPath("//h1[@id=\"sampleHeading\"]")).Text;
-            }
-        }
-
         public bool CheckTextsFromFrames
         {
             get
@@ -342,11 +324,6 @@ namespace SeleniumAdvancedPartOne.Pages
             }
         }
 
-        public void ClickWidgetsButton()
-        {
-            JavaScriptExecutor.ExecuteScript("arguments[0].scrollIntoView(true);", WidgetsButton);
-            WidgetsButton.Click();
-        }
         public void ClickProgressBarButton()
         {
             JavaScriptExecutor.ExecuteScript("arguments[0].scrollIntoView(true);", ProgressBarButton);
