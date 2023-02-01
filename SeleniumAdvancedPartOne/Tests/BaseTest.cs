@@ -1,6 +1,3 @@
-using OpenQA.Selenium;
-using PageObjectPattert.Lection.DriverConfiguration;
-using PageObjectPattert.Lection.Pages;
 using SeleniumAdvancedPartOne.Pages;
 
 namespace PageObjectPattert.Lection.Tests;
