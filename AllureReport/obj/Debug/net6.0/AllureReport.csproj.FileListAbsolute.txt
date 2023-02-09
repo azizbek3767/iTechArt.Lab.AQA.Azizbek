@@ -1,0 +1,5 @@
+C:\Users\Azizbek\Desktop\DemoSolution\AllureReport\obj\Debug\net6.0\AllureReport.csproj.AssemblyReference.cache
+C:\Users\Azizbek\Desktop\DemoSolution\AllureReport\obj\Debug\net6.0\AllureReport.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Azizbek\Desktop\DemoSolution\AllureReport\obj\Debug\net6.0\AllureReport.AssemblyInfoInputs.cache
+C:\Users\Azizbek\Desktop\DemoSolution\AllureReport\obj\Debug\net6.0\AllureReport.AssemblyInfo.cs
+C:\Users\Azizbek\Desktop\DemoSolution\AllureReport\obj\Debug\net6.0\AllureReport.csproj.CoreCompileInputs.cache
