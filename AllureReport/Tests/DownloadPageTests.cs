@@ -6,7 +6,7 @@
         public void Check_Download_Test()
         {
             //1.Перейти на главную страницу.
-            DownloadPage.Open();
+            DownloadPage.OpenPage();
             //Ожидаемый результат: Главная страница открыта.
             Assert.True(DownloadPage.IsPageOpened, "Download page should be opened");
             //2.Скачать любой файл с страницы.

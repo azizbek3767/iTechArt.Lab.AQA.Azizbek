@@ -12,10 +12,10 @@ namespace SeleniumAdvancedPartTwo.Pages
 
         protected override By UniqueWebLocator => By.XPath("//h3[contains(text(), \"Opening a new window\")]");
         private IWebElement ClickHereButton => WebDriver.FindElement(WindowsPageLocators.ClickHereButtonLocator);
-        private string originalWindow;
-        private string firstNewTab;
-        private string secondNewTab;
-        protected override string UrlPath => "/windows/";
+        private string OriginalWindow;
+        private string FirstNewTab;
+        private string SecondNewTab;
+        protected override string UrlPath => "/windows";
         public void Open()
         {
             var uri = new Uri("http://the-internet.herokuapp.com/windows", UriKind.Absolute);
@@ -23,7 +23,7 @@ namespace SeleniumAdvancedPartTwo.Pages
         }
         public void ClickClickHereButton()
         {
-            originalWindow = WebDriver.CurrentWindowHandle;
+            OriginalWindow = WebDriver.CurrentWindowHandle;
             ClickHereButton.Click();
             JavaScriptExecutor.ExecuteScript("console.log(arguments[0])", WebDriver.WindowHandles);
         }
@@ -35,7 +35,7 @@ namespace SeleniumAdvancedPartTwo.Pages
                 try
                 {
                     WebDriverWait.Until(driver => driver.WindowHandles.Count == 2);
-                    isInFirstNewTab = WebDriver.CurrentWindowHandle == firstNewTab;
+                    isInFirstNewTab = WebDriver.CurrentWindowHandle == FirstNewTab;
                 }
                 catch (Exception e)
                 {
@@ -53,7 +53,7 @@ namespace SeleniumAdvancedPartTwo.Pages
                 try
                 {
                     WebDriverWait.Until(driver => driver.WindowHandles.Count == 3);
-                    isInSecondNewTab = WebDriver.CurrentWindowHandle == secondNewTab;
+                    isInSecondNewTab = WebDriver.CurrentWindowHandle == SecondNewTab;
                 }
                 catch (Exception e)
                 {
@@ -99,17 +99,17 @@ namespace SeleniumAdvancedPartTwo.Pages
         }
         public void GoToFirstNewTab()
         {
-            firstNewTab = WebDriver.WindowHandles[1];
-            WebDriver.SwitchTo().Window(firstNewTab);
+            FirstNewTab = WebDriver.WindowHandles[1];
+            WebDriver.SwitchTo().Window(FirstNewTab);
         }
         public void GoToSecondNewTab()
         {
-            secondNewTab = WebDriver.WindowHandles[1];
-            WebDriver.SwitchTo().Window(secondNewTab);
+            SecondNewTab = WebDriver.WindowHandles[1];
+            WebDriver.SwitchTo().Window(SecondNewTab);
         }
         public void GoBackFirstNewTab()
         {
-            WebDriver.SwitchTo().Window(firstNewTab);
+            WebDriver.SwitchTo().Window(FirstNewTab);
         }
         public void GoBackSecondNewTab()
         {
@@ -117,7 +117,7 @@ namespace SeleniumAdvancedPartTwo.Pages
         }
         public void GoToOriginalTab()
         {
-            WebDriver.SwitchTo().Window(originalWindow);
+            WebDriver.SwitchTo().Window(OriginalWindow);
         }
         public void CloseCurrentTab()
         {

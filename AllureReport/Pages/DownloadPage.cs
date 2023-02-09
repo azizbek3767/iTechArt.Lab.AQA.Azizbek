@@ -12,12 +12,7 @@ namespace SeleniumAdvancedPartTwo.Pages
         protected override By UniqueWebLocator => By.XPath("//h3[contains(text(), \"File Downloader\")]");
         private IWebElement DownloadFileLink => WebDriver.FindElement(DownloadPageLocators.DownloadFileLinkLocator);
 
-        protected override string UrlPath => "/download/";
-        public void Open()
-        {
-            var uri = new Uri("http://the-internet.herokuapp.com/download", UriKind.Absolute);
-            WebDriver.Navigate().GoToUrl(uri);
-        }
+        protected override string UrlPath => "/download";
         public void DownloadFile()
         {
             DownloadFileLink.Click();

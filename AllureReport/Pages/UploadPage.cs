@@ -15,12 +15,7 @@ namespace SeleniumAdvancedPartTwo.Pages
         private IWebElement FileSubmitButton => WebDriver.FindElement(UploadPageLocators.FileSubmitButtonLocator);
         private IWebElement FileUploadedLabel => WebDriver.FindElement(UploadPageLocators.FileUploadedLabelLocator);
 
-        protected override string UrlPath => "/upload/";
-        public void Open()
-        {
-            var uri = new Uri("http://the-internet.herokuapp.com/upload", UriKind.Absolute);
-            WebDriver.Navigate().GoToUrl(uri);
-        }
+        protected override string UrlPath => "/upload";
         public void UploadFile()
         {
             FileUploadInput.SendKeys("C:\\Users\\Azizbek\\Desktop\\Photos\\photo.jpg");

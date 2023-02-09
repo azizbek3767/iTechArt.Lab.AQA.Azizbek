@@ -6,7 +6,7 @@
         public void Check_Slider_Test()
         {
             //1.Перейти на главную страницу
-            HorizontalSliderPage.Open();
+            HorizontalSliderPage.OpenPage();
             //Ожидаемый результат: Главная страница открыта
             Assert.True(HorizontalSliderPage.IsPageOpened, "Horizontal  Slider Page should be opened");
             //2.Установить случайное значение слайдера(отличное от граничных)

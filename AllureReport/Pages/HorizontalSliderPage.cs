@@ -11,15 +11,9 @@ namespace SeleniumAdvancedPartTwo.Pages
         
         private IWebElement RangeInput => WebDriver.FindElement(HorizontalSliderPageLocators.RangeInputLocator);
         private IWebElement RangeSpan => WebDriver.FindElement(HorizontalSliderPageLocators.RangeSpanLocator);
-
-        public void Open()
-        {
-            var uri = new Uri("http://the-internet.herokuapp.com/horizontal_slider", UriKind.Absolute);
-            WebDriver.Navigate().GoToUrl(uri);
-        }
         protected override By UniqueWebLocator => By.XPath("//h3[contains(text(), \"Horizontal Slider\")]");
 
-        protected override string UrlPath => "/horizontal_slider/";
+        protected override string UrlPath => "/horizontal_slider";
         public void ChangeValueOfSlider(int times)
         {
             for(var i = 0; i < times; i++)

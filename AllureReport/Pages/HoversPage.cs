@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using SeleniumAdvancedPartTwo.Locators;
+using SeleniumAdvancedPartTwo.Utilities;
 
 namespace SeleniumAdvancedPartTwo.Pages
 {
@@ -22,26 +23,21 @@ namespace SeleniumAdvancedPartTwo.Pages
         public string ThirdUserName { get; set; }
         protected override By UniqueWebLocator => By.XPath("//h3[contains(text(), \"Hovers\")]");
 
-        protected override string UrlPath => "/hovers/";
-        public void Open()
-        {
-            var uri = new Uri("http://the-internet.herokuapp.com/hovers", UriKind.Absolute);
-            WebDriver.Navigate().GoToUrl(uri);
-        }
+        protected override string UrlPath => "/hovers";
         public void HoverFirstUserItem()
         {
             Builder.MoveToElement(FirstUser).Perform();
-            FirstUserName = FirstUserNameLabel.Text.Split(' ')[1];
+            FirstUserName = HelperMethods.SplitElement(FirstUserNameLabel);
         }
         public void HoverSecondUserItem()
         {
             Builder.MoveToElement(SecondUser).Perform();
-            SecondUserName = SecondUserNameLabel.Text.Split(' ')[1];
+            SecondUserName = HelperMethods.SplitElement(SecondUserNameLabel);
         }
         public void HoverThirdUserItem()
         {
             Builder.MoveToElement(ThirdUser).Perform();
-            ThirdUserName = ThirdUserNameLabel.Text.Split(' ')[1];
+            ThirdUserName = HelperMethods.SplitElement(ThirdUserNameLabel);
         }
         public void ClickFirstUserButton()
         {

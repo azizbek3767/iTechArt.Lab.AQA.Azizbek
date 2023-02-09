@@ -6,7 +6,7 @@
         public void Upload_Image_Test()
         {
             //1.Перейти на главную страницу.
-            UploadPage.Open();
+            UploadPage.OpenPage();
             //Ожидаемый результат: Главная страница открыта.
             Assert.True(UploadPage.IsPageOpened, "Homepage should be opened");
 

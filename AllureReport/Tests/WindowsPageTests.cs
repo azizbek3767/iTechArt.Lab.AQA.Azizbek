@@ -8,7 +8,7 @@ namespace SeleniumAdvancedPartTwo.Tests
         public void Windows_Test()
         {
             //Перейти на главную страницу
-            WindowsPage.Open();
+            WindowsPage.OpenPage();
             //Ожидаемый результат: Главная страница открыта
             Assert.True(WindowsPage.IsPageOpened, "Windows page should be opened");
             //2.	Нажать на ссылку "Click Here"
