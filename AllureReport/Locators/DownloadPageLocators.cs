@@ -5,6 +5,6 @@ namespace SeleniumAdvancedPartTwo.Locators
     public static class DownloadPageLocators
     {
         public static readonly By DownloadFileLinkLocator =
-            By.XPath("//a[contains(text(), \"logo.jpeg\")]");
+            By.XPath("//a[contains(text(), \"newyork.png\")]");
     }
 }

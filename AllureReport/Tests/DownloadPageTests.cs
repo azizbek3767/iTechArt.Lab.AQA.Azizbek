@@ -12,7 +12,9 @@
             //2.Скачать любой файл с страницы.
             DownloadPage.DownloadFile();
             //Ожидаемый результат: Файл скачался и находится в директории(которую вы указали).
-            Assert.True(File.Exists("C:\\Users\\Azizbek\\Downloads\\logo.jpeg"), "File should be downloaded");
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "wwwwroot/newyork.png.crdownload");
+
+            Assert.True(File.Exists(path), "File should be downloaded");
         }
     }
 }
