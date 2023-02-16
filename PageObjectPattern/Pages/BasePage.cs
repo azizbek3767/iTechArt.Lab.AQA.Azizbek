@@ -1,12 +1,16 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using PageObjectPattern.Configurations;
+using PageObjectPattern.Utilities;
+using SeleniumExtras.WaitHelpers;
 
 namespace PageObjectPattern.Pages
 {
     public abstract class BasePage
     {
         protected IWebDriver WebDriver { get; }
-
+        protected WebDriverWait WebDriverWait { get; }
         protected BasePage(IWebDriver webDriver)
         {
             WebDriver = webDriver;
@@ -20,9 +24,11 @@ namespace PageObjectPattern.Pages
 
         protected abstract string UrlPath { get; }
 
+        [AllureStep("Open page")]
         public virtual void OpenPage()
         {
             var uri = new Uri(_baseUrl.TrimEnd('/') + UrlPath, UriKind.Absolute);
+            Logger.Instance.Info(uri.ToString());
             WebDriver.Navigate().GoToUrl(uri);
         }
 

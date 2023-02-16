@@ -5,6 +5,7 @@ using OpenQA.Selenium;
 using PageObjectPattern.Configurations;
 using WebDriverManager;
 using WebDriverManager.DriverConfigs.Impl;
+using PageObjectPattern.Utilities;
 
 namespace PageObjectPattern.DriverConfigurations
 {
@@ -15,6 +16,7 @@ namespace PageObjectPattern.DriverConfigurations
             IWebDriver driver;
 
             var browser = AppConfiguration.Browser;
+            Logger.Instance.Debug($"Start browser '{browser}'");
 
             switch (browser)
             {
@@ -22,7 +24,12 @@ namespace PageObjectPattern.DriverConfigurations
                     new DriverManager().SetUpDriver(new ChromeConfig(), "MatchingBrowser");
                     var options = new ChromeOptions();
                     options.AddArguments(ChromeArguments());
+                    foreach (var chromeArgument in ChromeArguments())
+                    {
+                        Logger.Instance.Debug($"Pass argument: '{chromeArgument}'");
+                    }
                     driver = new ChromeDriver(options);
+                    Logger.Instance.Debug(((WebDriver)driver).AuthenticatorId);
                     return driver;
                 case Browser.Edge:
                     driver = new EdgeDriver();

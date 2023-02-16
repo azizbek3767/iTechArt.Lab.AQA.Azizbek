@@ -1,18 +1,29 @@
-﻿using PageObjectPattern.Locators;
+﻿using Allure.Net.Commons;
+using NUnit.Allure.Attributes;
+using NUnit.Allure.Core;
+using PageObjectPattern.Locators;
 using PageObjectPattern.Pages;
 
 namespace PageObjectPattern.Tests
 {
     [TestFixture]
+    [AllureNUnit]
     internal class HomePageTests : BaseTest
     {
         [Test]
+        [AllureTag("Regression")]
+        [AllureSeverity(SeverityLevel.critical)]
+        [AllureIssue("Issue - 2")]
+        [AllureTms("Tms-13")]
+        [AllureOwner("Azizbek")]
+        [AllureSuite("Onliner")]
+        [AllureSubSuite("Positive")]
         public void Test()
         {
             // 1.Зайти на страницу http://onliner.by/
             HomePage.OpenPage();
             // Ожидаемый результат: Главная страница onliner открылась
-            Assert.True(HomePage.IsPageOpened, "HomePage should be opened");
+            Assert.True(HomePage.IsHomePageOpened, "HomePage should be opened");
 
             // 2.Открыть вкладку «мобильные телефоны»
             MobilePhonesPage.OpenPage();

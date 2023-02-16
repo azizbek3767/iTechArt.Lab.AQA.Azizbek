@@ -1,8 +1,10 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
 using PageObjectPattern.Locators;
+using PageObjectPattern.Utilities;
 using SeleniumExtras.WaitHelpers;
 
 namespace PageObjectPattern.Pages
@@ -28,6 +30,7 @@ namespace PageObjectPattern.Pages
         {
             get
             {
+                Logger.Instance.Info("Checking if there only iphones");
                 bool isOnlyIphones = true;
                 var phones = WebDriver.FindElements(HomePageLocators.PhonesListLocator);
                 foreach (var phone in phones)
@@ -40,27 +43,36 @@ namespace PageObjectPattern.Pages
                 return isOnlyIphones;
             }
         }
+
+        [AllureStep("Open Mobile phones page")]
         public override void OpenPage()
         {
+            Logger.Instance.Info("Opening the page");
             WebDriver.Navigate().GoToUrl(UrlPath);
         }
 
+        [AllureStep("Select apple and honor manufacturers")]
         public void SelectAppleAndHonor()
         {
+            Logger.Instance.Info("Seleccting only two models (apple, honor)");
             WebDriver.ExecuteJavaScript("arguments[0].scrollIntoView(true);", AppleManufacturerSpan);
             AppleManufacturerSpan.Click();
             WebDriver.ExecuteJavaScript("arguments[0].scrollIntoView(true);", HonorManufacturerSpan);
             HonorManufacturerSpan.Click();
         }
 
+        [AllureStep("Unselect honor manufacturer")]
         public void UnselectHonor()
         {
+            Logger.Instance.Info("unselecting the honor");
             WebDriver.ExecuteJavaScript("arguments[0].scrollIntoView(true);", HonorManufacturerSpan);
             HonorManufacturerSpan.Click();
         }
 
+        [AllureStep("Select first two items")]
         public void SelectFirstAndThirdItemCheckboxes()
         {
+            Logger.Instance.Info("Adding two items to the card");
             var wait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(10));
             wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//*[@id=\"schema-products\"]/div[2]/div/div[3]/div[2]/div[1]/a/span[contains(text(), 'Apple')]")));
 
@@ -69,8 +81,10 @@ namespace PageObjectPattern.Pages
             WebDriver.ExecuteJavaScript("arguments[0].click();", ThirdItemCheckboxLabel);
         }
 
+        [AllureStep("Go to compare page with seleted items")]
         public void GoToComparePageWithSelectedItems()
         {
+            Logger.Instance.Info("Going to the Compare page with selected items");
             Actions actions = new Actions(WebDriver);
             actions.MoveToElement(ButtonWithTwoElementsToCompare).Click().Build().Perform();
         }

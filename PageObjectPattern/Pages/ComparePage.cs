@@ -1,12 +1,9 @@
-﻿using Microsoft.Extensions.Options;
+﻿
+using NUnit.Allure.Attributes;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Interactions;
 using PageObjectPattern.Locators;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PageObjectPattern.Utilities;
 
 namespace PageObjectPattern.Pages
 {
@@ -22,15 +19,19 @@ namespace PageObjectPattern.Pages
 
         protected override string UrlPath => string.Empty;
 
+        [AllureStep("Go to definition part of the items")]
         public void GoToDefinition()
         {
             Actions actions = new Actions(WebDriver);
             actions.MoveToElement(SpanWithOverview).Perform();
+            Logger.Instance.Info("Going to the definition");
         }
 
+        [AllureStep("Go back to the mobile phones page")]
         public void BackToMobilePhonesPage()
         {
             WebDriver.Navigate().Back();
+            Logger.Instance.Info("Going back to the home page");
         }
     }
 }
