@@ -15,6 +15,10 @@
     <PackageReference Include="SeleniumExtras.WaitHelpers" Version="1.0.2" />
     <PackageReference Include="WebDriverManager" Version="2.16.2" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SeleniumWrapper.Core\SeleniumWrapper.Core.csproj" />
+  </ItemGroup>
 	<ItemGroup>
 		<None Update="Resources\appsettings.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>

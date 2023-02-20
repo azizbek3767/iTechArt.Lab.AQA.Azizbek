@@ -24,7 +24,7 @@ namespace SeleniumWrapper.Core.Elements
 
         public void Click()
         {
-            throw new NotImplementedException();
+            FindElement().Click();
         }
 
         public string GetText()

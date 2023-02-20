@@ -26,19 +26,16 @@ namespace SeleniumWrapper.Tests.Tests
             Assert.True(CheckoutPage.IsPageOpened, "Checkout page should be opened");
 
             //5.Заполнить обязательные поля «Информация о покупателе»(любые данные)
-            CheckoutPage.FillInCheckoutPageForm();
-            Thread.Sleep(5000);
             //Ожидаемый результат: информация о покупателе на странице, соответствует той, что вы ввели ранее
-
             //6.Заполнить поля «информация о доставке»(любые данные)
             //Ожидаемый результат: информация о доставке на странице, соответствует той, что вы ввели ранее
-
             //7.В разделе «Платежная информация» выбрать «Наличные», ввести «Код с картинки», нажать чекбокс «Я согласен с условиями соглашения»
+            CheckoutPage.FillInCheckoutPageForm();
 
             //8.Нажать кнопку «оформить заказ»
+            CheckoutPage.SubmitChecckoutForm();
             //Ожидаемый результат: на старнице есть надпись «Ваш заказ оформлен»
-
-
+            Assert.That(CheckoutPage.IsOrderConfirmed, "Order should be confirmed");
         }
     }
 }

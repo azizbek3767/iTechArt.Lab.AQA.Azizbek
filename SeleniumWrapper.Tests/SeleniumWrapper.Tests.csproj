@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SeleniumWrapper.Core\SeleniumWrapper.Core.csproj" />
     <ProjectReference Include="..\SeleniumWrapper.Page\SeleniumWrapper.Page.csproj" />
   </ItemGroup>
 
