@@ -6,7 +6,7 @@ namespace SeleniumWrapper.Core.Elements
 {
     public class CheckBox : BaseElement
     {
-        public CheckBox(By locator, string name) : base(locator, name)
+        public CheckBox(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
         {
         }
 

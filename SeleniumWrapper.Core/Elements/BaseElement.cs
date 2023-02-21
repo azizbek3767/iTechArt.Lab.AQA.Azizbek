@@ -10,21 +10,27 @@ namespace SeleniumWrapper.Core.Elements
         protected By Locator { get; }
 
         protected string Name { get; }
+        public IWebDriver WebDriver { get; set; }
 
-        protected BaseElement(By locator, string name)
+        protected BaseElement(IWebDriver webDriver, By locator, string name)
         {
-            this.Locator = locator;
+            Locator = locator;
             Name = name;
+            WebDriver = webDriver;
         }
-        protected MouseActions MouseActions => new MouseActions(WebDriver);
+       /* protected MouseActions MouseActions => new MouseActions(WebDriver);
         private WebDriver WebDriver
         {
             get { return BrowserService.Browser.WebDriver; }
-        }
+        }*/
 
         public void Click()
         {
             FindElement().Click();
+        }
+        public void SimpleClick()
+        {
+            WebDriver.FindElement(Locator).Click();
         }
 
         public string GetText()

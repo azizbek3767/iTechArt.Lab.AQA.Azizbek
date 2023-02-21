@@ -2,6 +2,7 @@
 
 using OpenQA.Selenium;
 using SeleniumExtras.WaitHelpers;
+using SeleniumWrapper.Core.Elements;
 using SeleniumWrapper.Page.Locators;
 
 namespace SeleniumWrapper.Page.Pages
@@ -11,12 +12,12 @@ namespace SeleniumWrapper.Page.Pages
         public ProductsPage(IWebDriver webDriver) : base(webDriver)
         {
         }
-        private IWebElement FIrstItemAddToCardIcon => WebDriver.FindElement(ProductsPageLocators.FIrstItemAddToCardIconLocator);
-        private IWebElement SecondItemAddToCardIcon => WebDriver.FindElement(ProductsPageLocators.SecondItemAddToCardIconLocator);
-        private IWebElement CardButton => WebDriver.FindElement(ProductsPageLocators.CardButtonLocator);
+        private Icon FIrstItemAddToCardIcon => new Icon(WebDriver, ProductsPageLocators.FIrstItemAddToCardIconLocator, "FIrst Item AddToCard Icon");
+        private Icon SecondItemAddToCardIcon => new Icon(WebDriver, ProductsPageLocators.SecondItemAddToCardIconLocator, "Second Item AddToCard Icon");
+        private Button CardButton => new Button(WebDriver, ProductsPageLocators.CardButtonLocator, "Card Button");
         private IWebElement OpenedCardSidebar => WebDriver.FindElement(ProductsPageLocators.OpenedCardSidebarLocator);
-        private IWebElement ItemsCount => WebDriver.FindElement(ProductsPageLocators.ItemsCountLocator);
-        private IWebElement OrderButton => WebDriver.FindElement(ProductsPageLocators.OrderButtonLocator);
+        private IWebElement ItemsCountIconEl => WebDriver.FindElement(ProductsPageLocators.ItemsCountLocator);
+        private Button OrderButton => new Button(WebDriver, ProductsPageLocators.OrderButtonLocator, "Order Button");
         protected override By UniqueWebLocator => By.XPath("//div[@class=\"goods-section-right-blocks\"]");
 
         protected override string UrlPath => "/products/category/8";
@@ -29,7 +30,6 @@ namespace SeleniumWrapper.Page.Pages
         public void ClickCardButton()
         {
             WaitForPageLoad();
-            //WebDriverWait.Until(JavaScriptExecutor.ExecuteScript("return document.readyState") == "complate");
             WebDriverWait.Until(ExpectedConditions.ElementIsVisible(ProductsPageLocators.TopCardItemsCountLocator));
             CardButton.Click();
         }
@@ -58,7 +58,7 @@ namespace SeleniumWrapper.Page.Pages
                 bool isCarditemsCountTrue;
                 try
                 {
-                    isCarditemsCountTrue = ItemsCount.Displayed;
+                    isCarditemsCountTrue = ItemsCountIconEl.Displayed;
                 }
                 catch (Exception e)
                 {

@@ -10,18 +10,18 @@ namespace SeleniumWrapper.Page.Pages
         public CheckoutPage(IWebDriver webDriver) : base(webDriver)
         {
         }
-        private IWebElement NameInput => WebDriver.FindElement(CheckoutPageLocators.NameInputLocator);
-        private IWebElement PhoneNumberInput => WebDriver.FindElement(CheckoutPageLocators.PhoneNumberInputLocator);
-        private IWebElement AddressInput => WebDriver.FindElement(CheckoutPageLocators.AddressInputLocator);
-        //private Button FirstNextStepButton => new Button(CheckoutPageLocators.FirstNextStepButtonLocator, "First Next Step Button");
-        private IWebElement FirstNextStepButton => WebDriver.FindElement(CheckoutPageLocators.FirstNextStepButtonLocator);
-        private IWebElement SecondNextStepButton => WebDriver.FindElement(CheckoutPageLocators.SecondNextStepButtonLocator);
-        private IWebElement DeliveryTypeCheckout => WebDriver.FindElement(CheckoutPageLocators.DeliveryTypeCheckoutLocator);
-        private IWebElement DeliveryComment => WebDriver.FindElement(CheckoutPageLocators.DeliveryCommentLocator);
-        private IWebElement CashPaymentTypeRadioButtonLabel => WebDriver.FindElement(CheckoutPageLocators.CashPaymentTypeRadioButtonLabelLocator);
-        private IWebElement AgreeCheckbox => WebDriver.FindElement(CheckoutPageLocators.AgreeCheckboxLocator);
-        private IWebElement SubmitButton => WebDriver.FindElement(CheckoutPageLocators.SubmitButtonLocator);
-        private IWebElement OrderConfirmationLabel => WebDriver.FindElement(CheckoutPageLocators.OrderConfirmationLabelLocator);
+        private Button FirstNextStepButton => new Button(WebDriver, CheckoutPageLocators.FirstNextStepButtonLocator, "First Next Step Button");
+        private Input NameInput => new Input(WebDriver, CheckoutPageLocators.NameInputLocator, "Name Input");
+        private Input PhoneNumberInput => new Input(WebDriver, CheckoutPageLocators.PhoneNumberInputLocator, "Phone Number Input");
+        private Input AddressInput => new Input(WebDriver, CheckoutPageLocators.AddressInputLocator, "Address Input");
+        private Button SecondNextStepButton => new Button(WebDriver, CheckoutPageLocators.SecondNextStepButtonLocator, "Second Next Step Button");
+        private CheckBox DeliveryTypeCheckout => new CheckBox(WebDriver, CheckoutPageLocators.DeliveryTypeCheckoutLocator, "Delivery Type Checkout");
+        private TextArea DeliveryComment => new TextArea(WebDriver, CheckoutPageLocators.DeliveryCommentLocator, "Delivery Comment");
+        private RadioButton CashPaymentTypeRadioButtonLabel => new RadioButton(WebDriver, CheckoutPageLocators.CashPaymentTypeRadioButtonLabelLocator, "Cash Payment Type RadioButton Label");
+        private CheckBox AgreeCheckbox => new CheckBox(WebDriver, CheckoutPageLocators.AgreeCheckboxLocator, "Agree Checkbox");
+        private Button SubmitButton => new Button(WebDriver, CheckoutPageLocators.SubmitButtonLocator, "Submit Button");
+        private Label OrderConfirmationLabel => new Label(WebDriver, CheckoutPageLocators.OrderConfirmationLabelLocator, "Order Confirmation Label");
+        private IWebElement OrderConfirmationLabelEl => WebDriver.FindElement(CheckoutPageLocators.OrderConfirmationLabelLocator);
 
         protected override By UniqueWebLocator => By.XPath("//h1[text()=\"Оформить заказ\"]");
 
@@ -57,7 +57,7 @@ namespace SeleniumWrapper.Page.Pages
                 bool isOrderConfirmed;
                 try
                 {
-                    isOrderConfirmed = OrderConfirmationLabel.Displayed;
+                    isOrderConfirmed = OrderConfirmationLabelEl.Displayed;
                 }
                 catch (Exception e)
                 {

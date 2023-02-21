@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using SeleniumWrapper.Page.Configurations;
+using SeleniumWrapper.Core.BrowserUtils;
 
 namespace SeleniumWrapper.Page.Pages
 {
@@ -14,6 +15,7 @@ namespace SeleniumWrapper.Page.Pages
         protected BasePage(IWebDriver webDriver)
         {
             WebDriver = webDriver;
+           // WebDriver = BrowserService.Browser.WebDriver;
             WebDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(AppConfiguration.ConditionTimeout));
             WebDriverWait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
             JavaScriptExecutor = (IJavaScriptExecutor)WebDriver;

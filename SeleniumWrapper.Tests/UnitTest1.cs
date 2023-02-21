@@ -19,7 +19,7 @@ namespace SeleniumWrapper.Tests
             Browser.Quit();
         }
 
-        [Test]
+        /*[Test]
         [Ignore("not needed")]
         public void Test1()
         {
@@ -55,6 +55,6 @@ namespace SeleniumWrapper.Tests
             var getSearchedText = googleSearchInput.GetValue();
 
             Assert.AreEqual(searchText, getSearchedText);
-        }
+        }*/
     }
 }

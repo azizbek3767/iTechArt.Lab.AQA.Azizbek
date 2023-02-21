@@ -6,7 +6,7 @@ namespace SeleniumWrapper.Core.Elements
 {
     public class Text : BaseElement
     {
-        public Text(By locator, string name) : base(locator, name)
+        public Text(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
         {
         }
 

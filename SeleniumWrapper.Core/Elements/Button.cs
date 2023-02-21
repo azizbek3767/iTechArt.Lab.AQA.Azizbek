@@ -6,7 +6,7 @@ namespace SeleniumWrapper.Core.Elements
 {
     public class Button : BaseElement
     {
-        public Button(By locator, string name) : base(locator, name)
+        public Button(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
         {
         }
     }
