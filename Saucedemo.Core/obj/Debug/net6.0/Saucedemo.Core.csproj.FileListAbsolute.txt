@@ -1,0 +1,16 @@
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\bin\Debug\net6.0\Resources\appsettings.json
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\bin\Debug\net6.0\Saucedemo.Core.deps.json
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\bin\Debug\net6.0\Saucedemo.Core.dll
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\bin\Debug\net6.0\Saucedemo.Core.pdb
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\Saucedemo.Core.csproj.AssemblyReference.cache
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\Saucedemo.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\Saucedemo.Core.AssemblyInfoInputs.cache
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\Saucedemo.Core.AssemblyInfo.cs
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\Saucedemo.Core.csproj.CoreCompileInputs.cache
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\Saucedemo.Core.dll
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\refint\Saucedemo.Core.dll
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\Saucedemo.Core.pdb
+C:\Users\Azizbek\Desktop\DemoSolution\Saucedemo.Core\obj\Debug\net6.0\ref\Saucedemo.Core.dll

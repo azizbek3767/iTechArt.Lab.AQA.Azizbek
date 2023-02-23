@@ -1,0 +1,15 @@
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\bin\Debug\net6.0\selenium-manager\linux\selenium-manager
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\bin\Debug\net6.0\selenium-manager\macos\selenium-manager
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\bin\Debug\net6.0\selenium-manager\windows\selenium-manager.exe
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\bin\Debug\net6.0\SeleniumWrapper.Core.deps.json
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\bin\Debug\net6.0\SeleniumWrapper.Core.dll
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\bin\Debug\net6.0\SeleniumWrapper.Core.pdb
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\SeleniumWrapper.Core.csproj.AssemblyReference.cache
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\SeleniumWrapper.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\SeleniumWrapper.Core.AssemblyInfoInputs.cache
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\SeleniumWrapper.Core.AssemblyInfo.cs
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\SeleniumWrapper.Core.csproj.CoreCompileInputs.cache
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\SeleniumWrapper.Core.dll
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\refint\SeleniumWrapper.Core.dll
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\SeleniumWrapper.Core.pdb
+C:\Users\Azizbek\Desktop\DemoSolution\SeleniumWrapper.Core\obj\Debug\net6.0\ref\SeleniumWrapper.Core.dll
