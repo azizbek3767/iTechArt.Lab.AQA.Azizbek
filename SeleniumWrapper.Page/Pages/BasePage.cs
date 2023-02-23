@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
-using SeleniumWrapper.Page.Configurations;
-using SeleniumWrapper.Core.BrowserUtils;
+using SeleniumWrapper.Core.Configurations;
+using NUnit.Framework;
 
 namespace SeleniumWrapper.Page.Pages
 {
@@ -15,7 +15,6 @@ namespace SeleniumWrapper.Page.Pages
         protected BasePage(IWebDriver webDriver)
         {
             WebDriver = webDriver;
-           // WebDriver = BrowserService.Browser.WebDriver;
             WebDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(AppConfiguration.ConditionTimeout));
             WebDriverWait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
             JavaScriptExecutor = (IJavaScriptExecutor)WebDriver;
@@ -65,7 +64,7 @@ namespace SeleniumWrapper.Page.Pages
             }
             catch (WebDriverTimeoutException e)
             {
-                //throw new AssertionException($"Page with unique locator: '{UniqueWebLocator}' was not opened", e);
+                throw new AssertionException($"Page with unique locator: '{UniqueWebLocator}' was not opened", e);
             }
         }
     }

@@ -5,7 +5,7 @@ namespace SeleniumWrapper.Tests.Tests
     internal class ProductsPageTests : BaseTest
     {
         [Test]
-        public void JustTest()
+        public void Mediapart_Check_Checkout_Action()
         {
             //1.Перейти на сайт Купить Телевизоры в интернет магазине MEDIAPARK.UZ в Ташкенте.
             ProductsPage.OpenPage();

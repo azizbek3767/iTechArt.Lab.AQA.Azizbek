@@ -10,17 +10,17 @@ namespace SeleniumWrapper.Page.Pages
         public CheckoutPage(IWebDriver webDriver) : base(webDriver)
         {
         }
-        private Button FirstNextStepButton => new Button(WebDriver, CheckoutPageLocators.FirstNextStepButtonLocator, "First Next Step Button");
-        private Input NameInput => new Input(WebDriver, CheckoutPageLocators.NameInputLocator, "Name Input");
-        private Input PhoneNumberInput => new Input(WebDriver, CheckoutPageLocators.PhoneNumberInputLocator, "Phone Number Input");
-        private Input AddressInput => new Input(WebDriver, CheckoutPageLocators.AddressInputLocator, "Address Input");
-        private Button SecondNextStepButton => new Button(WebDriver, CheckoutPageLocators.SecondNextStepButtonLocator, "Second Next Step Button");
-        private CheckBox DeliveryTypeCheckout => new CheckBox(WebDriver, CheckoutPageLocators.DeliveryTypeCheckoutLocator, "Delivery Type Checkout");
-        private TextArea DeliveryComment => new TextArea(WebDriver, CheckoutPageLocators.DeliveryCommentLocator, "Delivery Comment");
-        private RadioButton CashPaymentTypeRadioButtonLabel => new RadioButton(WebDriver, CheckoutPageLocators.CashPaymentTypeRadioButtonLabelLocator, "Cash Payment Type RadioButton Label");
-        private CheckBox AgreeCheckbox => new CheckBox(WebDriver, CheckoutPageLocators.AgreeCheckboxLocator, "Agree Checkbox");
-        private Button SubmitButton => new Button(WebDriver, CheckoutPageLocators.SubmitButtonLocator, "Submit Button");
-        private Label OrderConfirmationLabel => new Label(WebDriver, CheckoutPageLocators.OrderConfirmationLabelLocator, "Order Confirmation Label");
+        private Button FirstNextStepButton => new Button(CheckoutPageLocators.FirstNextStepButtonLocator, "First Next Step Button");
+        private Input NameInput => new Input(CheckoutPageLocators.NameInputLocator, "Name Input");
+        private Input PhoneNumberInput => new Input(CheckoutPageLocators.PhoneNumberInputLocator, "Phone Number Input");
+        private Input AddressInput => new Input(CheckoutPageLocators.AddressInputLocator, "Address Input");
+        private Button SecondNextStepButton => new Button(CheckoutPageLocators.SecondNextStepButtonLocator, "Second Next Step Button");
+        private CheckBox DeliveryTypeCheckout => new CheckBox(CheckoutPageLocators.DeliveryTypeCheckoutLocator, "Delivery Type Checkout");
+        private TextArea DeliveryComment => new TextArea(CheckoutPageLocators.DeliveryCommentLocator, "Delivery Comment");
+        private RadioButton CashPaymentTypeRadioButtonLabel => new RadioButton(CheckoutPageLocators.CashPaymentTypeRadioButtonLabelLocator, "Cash Payment Type RadioButton Label");
+        private CheckBox AgreeCheckbox => new CheckBox(CheckoutPageLocators.AgreeCheckboxLocator, "Agree Checkbox");
+        private Button SubmitButton => new Button(CheckoutPageLocators.SubmitButtonLocator, "Submit Button");
+        private Label OrderConfirmationLabel => new Label(CheckoutPageLocators.OrderConfirmationLabelLocator, "Order Confirmation Label");
         private IWebElement OrderConfirmationLabelEl => WebDriver.FindElement(CheckoutPageLocators.OrderConfirmationLabelLocator);
 
         protected override By UniqueWebLocator => By.XPath("//h1[text()=\"Оформить заказ\"]");

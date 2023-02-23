@@ -2,9 +2,9 @@
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class Input : BaseElement
+    public class Input : BaseForm
     {
-        public Input(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
+        public Input(By locator, string name) : base(locator, name)
         {
         }
         public void SendKeys(string keys)

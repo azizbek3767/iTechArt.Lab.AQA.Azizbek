@@ -1,12 +1,10 @@
-﻿
-
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class Button : BaseElement
+    public class Button : BaseForm
     {
-        public Button(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
+        public Button(By locator, string name) : base(locator, name)
         {
         }
     }

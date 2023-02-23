@@ -1,12 +1,10 @@
-﻿
-
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class Label : BaseElement
+    public class Label : BaseForm
     {
-        public Label(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
+        public Label(By locator, string name) : base(locator, name)
         {
         }
     }

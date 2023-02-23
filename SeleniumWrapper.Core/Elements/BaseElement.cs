@@ -5,24 +5,22 @@ using SeleniumWrapper.Core.Utilities;
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public abstract class BaseElement
+    public abstract class BaseForm
     {
         protected By Locator { get; }
 
         protected string Name { get; }
-        public IWebDriver WebDriver { get; set; }
 
-        protected BaseElement(IWebDriver webDriver, By locator, string name)
+        protected BaseForm(By locator, string name)
         {
             Locator = locator;
             Name = name;
-            WebDriver = webDriver;
         }
-       /* protected MouseActions MouseActions => new MouseActions(WebDriver);
+        protected MouseActions MouseActions => new MouseActions(WebDriver);
         private WebDriver WebDriver
         {
             get { return BrowserService.Browser.WebDriver; }
-        }*/
+        }
 
         public void Click()
         {

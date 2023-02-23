@@ -1,12 +1,10 @@
-﻿
-
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class Icon : BaseElement
+    public class Icon : BaseForm
     {
-        public Icon(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
+        public Icon(By locator, string name) : base(locator, name)
         {
         }
     }

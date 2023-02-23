@@ -2,9 +2,9 @@
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class TextArea : BaseElement
+    public class TextArea : BaseForm
     {
-        public TextArea(IWebDriver webDriver, By locator, string name) : base(webDriver, locator, name)
+        public TextArea(By locator, string name) : base(locator, name)
         {
         }
         public void SendKeys(string keys)

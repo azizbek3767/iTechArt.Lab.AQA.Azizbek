@@ -1,8 +1,7 @@
-﻿
-using SeleniumWrapper.Page.DriverConfiguration;
-using SeleniumWrapper.Page.Utilities;
+﻿using SeleniumWrapper.Core.BrowserUtils;
+using SeleniumWrapper.Core.Utilities;
 
-namespace SeleniumWrapper.Page.Configurations
+namespace SeleniumWrapper.Core.Configurations
 {
     public static class AppConfiguration
     {
@@ -10,8 +9,8 @@ namespace SeleniumWrapper.Page.Configurations
 
         private const string UrlKey = "url";
 
-        public static readonly Browser Browser =
-            Enum.Parse<Browser>(Configurator.GetConfigurator().GetSection(BrowserKey).Value, true);
+        public static readonly BrowserEnum Browser =
+            Enum.Parse<BrowserEnum>(Configurator.GetConfigurator().GetSection(BrowserKey).Value, true);
         public static readonly string Url =
             Configurator.GetConfigurator().GetSection(UrlKey).Value;
         public static readonly int ConditionTimeout =

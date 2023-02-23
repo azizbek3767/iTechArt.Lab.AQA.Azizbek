@@ -1,19 +1,18 @@
-﻿
-using SeleniumWrapper.Core.BrowserUtils;
+﻿using SeleniumWrapper.Core.BrowserUtils;
 using SeleniumWrapper.Core.Elements;
 
 namespace SeleniumWrapper.Core.PageUtils
 {
     public abstract class Page
     {
-        protected Page(BaseElement uniqueElement, string pageName)
+        protected Page(BaseForm uniqueElement, string pageName)
         {
             UniqueElement = uniqueElement;
         }
 
         public Browser Browser => BrowserService.Browser;
 
-        private BaseElement UniqueElement { get; }
+        private BaseForm UniqueElement { get; }
 
         public bool IsPageOpened()
         {

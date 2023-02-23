@@ -1,5 +1,5 @@
 ﻿using OpenQA.Selenium;
-using SeleniumWrapper.Page.DriverConfiguration;
+using SeleniumWrapper.Core.BrowserUtils;
 using SeleniumWrapper.Page.Pages;
 
 namespace SeleniumWrapper.Page.Tests
@@ -13,7 +13,7 @@ namespace SeleniumWrapper.Page.Tests
         [SetUp]
         public void SetUp()
         {
-            WebDriver = new WebDriverFactory().GetDriver();
+            WebDriver = BrowserService.Browser.WebDriver;
             WebDriver.Manage().Window.Maximize();
 
             ProductsPage = new ProductsPage(WebDriver);
