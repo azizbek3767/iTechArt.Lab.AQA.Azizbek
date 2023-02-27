@@ -10,5 +10,7 @@ namespace Saucedemo.Page.Locators
             By.XPath("//input[@id=\"password\"]");
         public static readonly By LoginButtonLocator =
             By.XPath("//input[@id=\"login-button\"]");
+        public static readonly By LockedOutUserErrorMessageLocator =
+            By.XPath("//div[@class=\"error-message-container error\"]");
     }
 }

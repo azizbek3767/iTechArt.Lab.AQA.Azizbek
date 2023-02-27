@@ -10,7 +10,7 @@ namespace Saucedemo.Tests.Unit.Tests
 
         protected LoginPage LoginPage { get; private set; }
 
-        protected HomePage HomePage { get; private set; }
+        protected InventoryPage InventoryPage { get; private set; }
 
         [SetUp]
         public void SetUp()
@@ -20,7 +20,7 @@ namespace Saucedemo.Tests.Unit.Tests
             WebDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
 
             LoginPage = new LoginPage(WebDriver);
-            HomePage = new HomePage(WebDriver);
+            InventoryPage = new InventoryPage(WebDriver);
         }
 
         [TearDown]

@@ -1,11 +1,9 @@
-﻿
-
-using OpenQA.Selenium.Interactions;
+﻿using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 using Saucedemo.Core.BrowserUtils;
 using Saucedemo.Core.Configurations;
-using OpenQA.Selenium.DevTools.V108.Browser;
+using Saucedemo.Page.Components;
 
 namespace Saucedemo.Page.Pages
 {
@@ -17,7 +15,6 @@ namespace Saucedemo.Page.Pages
         protected Actions Builder { get; }
         protected BasePage(IWebDriver webDriver)
         {
-            //WebDriver = webDriver;
             WebDriver = BrowserService.Browser.WebDriver;
             WebDriverWait = new WebDriverWait(WebDriver, TimeSpan.FromSeconds(10));
             WebDriverWait.IgnoreExceptionTypes(typeof(StaleElementReferenceException));
@@ -32,6 +29,7 @@ namespace Saucedemo.Page.Pages
         private readonly string _baseUrl = AppConfiguration.Url;
 
         protected abstract string UrlPath { get; }
+        public virtual LeftSidebarComponent LeftSidebarComponent => new LeftSidebarComponent(WebDriver);
 
         public void OpenPage()
         {
