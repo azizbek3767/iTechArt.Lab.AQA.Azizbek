@@ -2,7 +2,7 @@
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class CheckBox : BaseForm
+    public class CheckBox : BaseElement
     {
         public CheckBox(By locator, string name) : base(locator, name)
         {

@@ -5,14 +5,14 @@ namespace SeleniumWrapper.Core.PageUtils
 {
     public abstract class Page
     {
-        protected Page(BaseForm uniqueElement, string pageName)
+        protected Page(BaseElement uniqueElement, string pageName)
         {
             UniqueElement = uniqueElement;
         }
 
         public Browser Browser => BrowserService.Browser;
 
-        private BaseForm UniqueElement { get; }
+        private BaseElement UniqueElement { get; }
 
         public bool IsPageOpened()
         {

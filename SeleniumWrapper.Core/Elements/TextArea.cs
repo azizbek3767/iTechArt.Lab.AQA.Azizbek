@@ -2,7 +2,7 @@
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class TextArea : BaseForm
+    public class TextArea : BaseElement
     {
         public TextArea(By locator, string name) : base(locator, name)
         {

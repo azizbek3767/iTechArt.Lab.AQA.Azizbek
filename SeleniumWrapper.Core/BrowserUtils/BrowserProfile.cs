@@ -26,6 +26,8 @@ namespace SeleniumWrapper.Core.BrowserUtils
     public enum BrowserEnum
     {
         Chrome,
-        Opera
+        Opera,
+        Firefox,
+        Edge
     }
 }

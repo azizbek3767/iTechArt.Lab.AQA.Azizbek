@@ -2,7 +2,7 @@
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class RadioButton : BaseForm
+    public class RadioButton : BaseElement
     {
         public RadioButton(By locator, string name) : base(locator, name)
         {

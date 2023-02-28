@@ -1,8 +1,13 @@
-﻿
+﻿using OpenQA.Selenium;
 
 namespace SeleniumWrapper.Core.Actions
 {
-    internal class JsActions
+    public class JsActions
     {
+        public IWebDriver WebDriver { get; }
+        public JsActions(IWebDriver webDriver)
+        {
+            WebDriver = webDriver;
+        }
     }
 }

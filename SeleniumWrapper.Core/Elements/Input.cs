@@ -2,7 +2,7 @@
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class Input : BaseForm
+    public class Input : BaseElement
     {
         public Input(By locator, string name) : base(locator, name)
         {

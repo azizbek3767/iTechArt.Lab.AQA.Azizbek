@@ -2,7 +2,7 @@
 
 namespace SeleniumWrapper.Core.Elements
 {
-    public class Icon : BaseForm
+    public class Icon : BaseElement
     {
         public Icon(By locator, string name) : base(locator, name)
         {
