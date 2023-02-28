@@ -22,6 +22,10 @@ namespace Saucedemo.Page.Pages
         {
             BurgerMenuButton.Click();
         }
+        public void ClickTopCartButton()
+        {
+            TopCartIconBadgeNumberLabel.Click();
+        }
         public void AddSomeItemsToTheCart()
         {
             FirstItemAddToCartButton.Click();

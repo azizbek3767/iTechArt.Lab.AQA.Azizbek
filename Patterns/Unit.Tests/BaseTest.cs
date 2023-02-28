@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using Saucedemo.Core.BrowserUtils;
 using Saucedemo.Page.Pages;
+using Saucedemo.Page.Steps;
 
 namespace Saucedemo.Tests.Unit.Tests
 {
@@ -11,6 +12,9 @@ namespace Saucedemo.Tests.Unit.Tests
         protected LoginPage LoginPage { get; private set; }
 
         protected InventoryPage InventoryPage { get; private set; }
+        protected CartPage CartPage { get; private set; }
+        protected CheckoutStepOnePage CheckoutStepOnePage { get; private set; }
+        protected CheckoutStepOnePageSteps CheckoutStepOnePageSteps { get; private set; }
 
         [SetUp]
         public void SetUp()
@@ -21,6 +25,10 @@ namespace Saucedemo.Tests.Unit.Tests
 
             LoginPage = new LoginPage(WebDriver);
             InventoryPage = new InventoryPage(WebDriver);
+            CartPage = new CartPage(WebDriver);
+            CheckoutStepOnePage = new CheckoutStepOnePage(WebDriver);
+            CheckoutStepOnePageSteps = new CheckoutStepOnePageSteps(WebDriver);
+
         }
 
         [TearDown]
