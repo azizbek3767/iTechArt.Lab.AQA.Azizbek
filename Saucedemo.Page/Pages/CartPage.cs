@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using Saucedemo.Core.Elements;
 using Saucedemo.Page.Locators;
 
@@ -14,6 +15,8 @@ namespace Saucedemo.Page.Pages
 
         protected override string UrlPath => "/cart.html";
         private Button CheckoutButton => new(CartPageLocators.CheckoutButtonLocator, "Checkout button");
+
+        [AllureStep("Click CheckOut Button")]
         public void ClickCheckOutButton()
         {
             CheckoutButton.Click();

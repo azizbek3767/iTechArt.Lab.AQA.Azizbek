@@ -13,4 +13,10 @@
     <SourceRoot Include="C:\Users\Azizbek\.nuget\packages\" />
     <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
   </ItemGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)nunit\3.13.3\build\NUnit.props" Condition="Exists('$(NuGetPackageRoot)nunit\3.13.3\build\NUnit.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgAspectInjector Condition=" '$(PkgAspectInjector)' == '' ">C:\Users\Azizbek\.nuget\packages\aspectinjector\2.8.1</PkgAspectInjector>
+  </PropertyGroup>
 </Project>

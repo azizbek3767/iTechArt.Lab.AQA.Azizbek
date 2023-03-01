@@ -1,0 +1,205 @@
+{
+  "uuid": "1207e875-c878-4483-9fc1-0a7cd7c1db61-tr-0-1001",
+  "historyId": "Saucedemo.Tests.Unit.Tests.ChainOfInvocationPatternTests.Checkout_Tests_Via_Chain_Of_Invocation_Pattern",
+  "fullName": "Saucedemo.Tests.Unit.Tests.ChainOfInvocationPatternTests.Checkout_Tests_Via_Chain_Of_Invocation_Pattern",
+  "labels": [
+    {
+      "name": "thread",
+      "value": "NonParallelWorker"
+    },
+    {
+      "name": "host",
+      "value": "DESKTOP-KUSN2T2"
+    },
+    {
+      "name": "package",
+      "value": "Saucedemo.Tests.Unit.Tests"
+    },
+    {
+      "name": "testMethod",
+      "value": "Checkout_Tests_Via_Chain_Of_Invocation_Pattern"
+    },
+    {
+      "name": "testClass",
+      "value": "ChainOfInvocationPatternTests"
+    },
+    {
+      "name": "tag",
+      "value": "Regression"
+    },
+    {
+      "name": "severity",
+      "value": "critical"
+    },
+    {
+      "name": "owner",
+      "value": "Azizbek"
+    },
+    {
+      "name": "suite",
+      "value": "Checkout Tests Via Chain Of Invocation Pattern"
+    },
+    {
+      "name": "subSuite",
+      "value": "Positive"
+    }
+  ],
+  "links": [
+    {
+      "name": "Issue - 2",
+      "url": "https://github.com/nunit/docs/issues?utf8=%E2%9C%93&q=Issue%20-%202",
+      "type": "issue"
+    },
+    {
+      "name": "Tms-13",
+      "url": "https://example.org/Tms-13",
+      "type": "tms"
+    }
+  ],
+  "name": "Checkout_Tests_Via_Chain_Of_Invocation_Pattern",
+  "status": "passed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "Checkout_Tests_Via_Chain_Of_Invocation_Pattern"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Log in as a particular user",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "userType",
+          "value": "standard_user"
+        }
+      ],
+      "start": 1677660894949,
+      "stop": 1677660895302
+    },
+    {
+      "name": "Add Some Items To The Cart",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677660895349,
+      "stop": 1677660895486
+    },
+    {
+      "name": "Click Top Cart Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677660895488,
+      "stop": 1677660895552
+    },
+    {
+      "name": "Click CheckOut Button",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1677660895585,
+      "stop": 1677660895650
+    },
+    {
+      "name": "Input first name",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "firstName",
+          "value": "Azizbek"
+        }
+      ],
+      "start": 1677660895653,
+      "stop": 1677660895770
+    },
+    {
+      "name": "Input last name",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "lastName",
+          "value": "asdasdasd"
+        }
+      ],
+      "start": 1677660895771,
+      "stop": 1677660895883
+    },
+    {
+      "name": "input zip code",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [
+        {
+          "name": "zipCode",
+          "value": "100000"
+        }
+      ],
+      "start": 1677660895884,
+      "stop": 1677660895980
+    }
+  ],
+  "attachments": [
+    {
+      "name": "Console Output",
+      "source": "e72b301f5fc94a209b9afa9924d19606-attachment.txt",
+      "type": "text/plain"
+    }
+  ],
+  "parameters": [],
+  "start": 1677660885619,
+  "stop": 1677660896393
+}

@@ -1,0 +1,95 @@
+2023-03-02 03:53:59 INFO - Test started
+2023-03-02 03:53:59 INFO - WebDriver started
+2023-03-02 03:53:59 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:01 DEBUG - Login page opened
+2023-03-02 03:54:02 DEBUG - Login in
+2023-03-02 03:54:02 INFO - Test ended
+2023-03-02 03:54:02 INFO - Test started
+2023-03-02 03:54:02 INFO - WebDriver started
+2023-03-02 03:54:02 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:03 DEBUG - Login in
+2023-03-02 03:54:03 DEBUG - Login page opened
+2023-03-02 03:54:04 DEBUG - Inventory page opened
+2023-03-02 03:54:05 DEBUG - Items added to the cart
+2023-03-02 03:54:05 DEBUG - cart page opened
+2023-03-02 03:54:05 DEBUG - checkout page opened
+2023-03-02 03:54:05 DEBUG - checkout user info form filled
+2023-03-02 03:54:05 INFO - Test ended
+2023-03-02 03:54:05 INFO - Test started
+2023-03-02 03:54:05 INFO - WebDriver started
+2023-03-02 03:54:05 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:07 DEBUG - Login in
+2023-03-02 03:54:07 DEBUG - Login page opened
+2023-03-02 03:54:08 DEBUG - Inventory page opened
+2023-03-02 03:54:08 DEBUG - All items button clicked form the left sidebar
+2023-03-02 03:54:08 DEBUG - Inventory page is still open
+2023-03-02 03:54:08 DEBUG - About button clicked form the left sidebar
+2023-03-02 03:54:11 DEBUG - saucelabs.com opened
+2023-03-02 03:54:11 DEBUG - Going back to the inventory page
+2023-03-02 03:54:11 DEBUG - Logout button clicked form the left sidebar
+2023-03-02 03:54:11 DEBUG - Log out page opened
+2023-03-02 03:54:11 DEBUG - Login in
+2023-03-02 03:54:11 DEBUG - Login page opened
+2023-03-02 03:54:11 DEBUG - Items added to the cart
+2023-03-02 03:54:11 DEBUG - Reset app state button clicked form the left sidebar
+2023-03-02 03:54:12 DEBUG - Items removed from the cart
+2023-03-02 03:54:15 INFO - Test ended
+2023-03-02 03:54:15 INFO - Test started
+2023-03-02 03:54:15 INFO - WebDriver started
+2023-03-02 03:54:15 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:16 DEBUG - Login in
+2023-03-02 03:54:16 DEBUG - Login page opened
+2023-03-02 03:54:17 DEBUG - Logged in as a standard user
+2023-03-02 03:54:17 DEBUG - Inventory page opened
+2023-03-02 03:54:17 DEBUG - Logged in as a problem user
+2023-03-02 03:54:18 DEBUG - Inventory page opened
+2023-03-02 03:54:18 DEBUG - Logged in as a performance glitch user
+2023-03-02 03:54:23 DEBUG - Inventory page opened
+2023-03-02 03:54:23 DEBUG - Logged in as a locked out user
+2023-03-02 03:54:23 DEBUG - Error message appeared
+2023-03-02 03:54:23 INFO - Test ended
+2023-03-02 03:54:23 INFO - Test started
+2023-03-02 03:54:23 INFO - WebDriver started
+2023-03-02 03:54:23 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:25 DEBUG - Login in
+2023-03-02 03:54:25 DEBUG - Login page opened
+2023-03-02 03:54:25 DEBUG - Logged in as a standard user
+2023-03-02 03:54:26 DEBUG - Inventory page opened
+2023-03-02 03:54:26 DEBUG - Some items are added to the cart
+2023-03-02 03:54:26 DEBUG - cart page opened
+2023-03-02 03:54:26 DEBUG - checkout page opened
+2023-03-02 03:54:26 DEBUG - checkout page user info form filled
+2023-03-02 03:54:26 DEBUG - checkout finished
+2023-03-02 03:54:26 INFO - Test ended
+2023-03-02 03:54:26 INFO - Test started
+2023-03-02 03:54:26 INFO - WebDriver started
+2023-03-02 03:54:26 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:28 DEBUG - Login in
+2023-03-02 03:54:28 DEBUG - Login page opened
+2023-03-02 03:54:29 DEBUG - Logged in as a locked out user
+2023-03-02 03:54:29 DEBUG - error message appeared
+2023-03-02 03:54:29 INFO - Test ended
+2023-03-02 03:54:29 INFO - Test started
+2023-03-02 03:54:29 INFO - WebDriver started
+2023-03-02 03:54:29 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:31 DEBUG - Login in
+2023-03-02 03:54:31 DEBUG - Login page opened
+2023-03-02 03:54:37 DEBUG - Logged in as a performance glitch user
+2023-03-02 03:54:37 DEBUG - inventory page opened
+2023-03-02 03:54:37 INFO - Test ended
+2023-03-02 03:54:37 INFO - Test started
+2023-03-02 03:54:37 INFO - WebDriver started
+2023-03-02 03:54:37 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:38 DEBUG - Login in
+2023-03-02 03:54:38 DEBUG - Login page opened
+2023-03-02 03:54:40 DEBUG - Logged in as a problem user
+2023-03-02 03:54:40 DEBUG - inventory page opened
+2023-03-02 03:54:40 INFO - Test ended
+2023-03-02 03:54:40 INFO - Test started
+2023-03-02 03:54:40 INFO - WebDriver started
+2023-03-02 03:54:40 DEBUG - Start browser 'Chrome'
+2023-03-02 03:54:41 DEBUG - Login in
+2023-03-02 03:54:41 DEBUG - Login page opened
+2023-03-02 03:54:42 DEBUG - Logged in as a standard user
+2023-03-02 03:54:42 DEBUG - inventory page opened
+2023-03-02 03:54:42 INFO - Test ended

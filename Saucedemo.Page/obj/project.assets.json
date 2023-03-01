@@ -2,6 +2,41 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Allure.Net.Commons/2.9.4-preview.6": {
+        "type": "package",
+        "dependencies": {
+          "MimeTypesMap": "1.0.8",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Allure.Net.Commons.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Allure.Net.Commons.dll": {}
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
+      "Allure.NUnit/2.9.4-preview.6": {
+        "type": "package",
+        "dependencies": {
+          "Allure.Net.Commons": "2.9.4-preview.6",
+          "AspectInjector": "2.8.1",
+          "NUnit": "3.13.3",
+          "NUnit.Engine.Api": "3.15.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/Allure.NUnit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Allure.NUnit.dll": {}
+        }
+      },
       "AngleSharp/0.17.1": {
         "type": "package",
         "dependencies": {
@@ -17,6 +52,22 @@
           "lib/netstandard2.0/AngleSharp.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "AspectInjector/2.8.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/AspectInjector.Broker.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspectInjector.Broker.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/netstandard2.0/AspectInjector.targets": {}
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -211,6 +262,30 @@
           }
         }
       },
+      "MimeTypesMap/1.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/MimeTypesMap.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MimeTypesMap.dll": {}
+        }
+      },
+      "NETStandard.Library/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0"
+        },
+        "compile": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.0/_._": {}
+        },
+        "build": {
+          "build/netstandard2.0/NETStandard.Library.targets": {}
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "type": "package",
         "compile": {
@@ -235,6 +310,34 @@
           "lib/netstandard2.0/NLog.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "NUnit/3.13.3": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/NUnit.props": {}
+        }
+      },
+      "NUnit.Engine.Api/3.15.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/nunit.engine.api.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.engine.api.dll": {}
         }
       },
       "Selenium.Support/4.8.1": {
@@ -453,6 +556,39 @@
     }
   },
   "libraries": {
+    "Allure.Net.Commons/2.9.4-preview.6": {
+      "sha512": "vI/KByUGYsPeJnTHCmMDoHpYNDN71wSMAv9erS0vlDn63Mx8Wa8oVFeEHQWHY4AiZWab3r8dA5CORpHF5TDAVA==",
+      "type": "package",
+      "path": "allure.net.commons/2.9.4-preview.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Allure-Color.png",
+        "README.md",
+        "allure.net.commons.2.9.4-preview.6.nupkg.sha512",
+        "allure.net.commons.nuspec",
+        "content/allureConfig.Template.json",
+        "contentFiles/any/net45/allureConfig.Template.json",
+        "contentFiles/any/netstandard2.0/allureConfig.Template.json",
+        "lib/net45/Allure.Net.Commons.dll",
+        "lib/netstandard2.0/Allure.Net.Commons.dll"
+      ]
+    },
+    "Allure.NUnit/2.9.4-preview.6": {
+      "sha512": "Ac3M3/ZcPaz40FxmJKufA3qp8JnEtEAQOjPegtuUHADiXmwnh6iCw7FdAMU9PM9vZEkmOi+F5LzwGL7JsXe+3g==",
+      "type": "package",
+      "path": "allure.nunit/2.9.4-preview.6",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Allure-N-Color.png",
+        "LICENSE.md",
+        "README.md",
+        "allure.nunit.2.9.4-preview.6.nupkg.sha512",
+        "allure.nunit.nuspec",
+        "lib/netstandard2.0/Allure.NUnit.dll"
+      ]
+    },
     "AngleSharp/0.17.1": {
       "sha512": "5MPI4bbixlwxb0W/smOMeIR+QlxMy5/5jD+WnIAw4pBC+7AhLPe5bS3cLgQMJyvd6q0A48sG+uYOt/ep406GLA==",
       "type": "package",
@@ -469,6 +605,38 @@
         "lib/netstandard2.0/AngleSharp.dll",
         "lib/netstandard2.0/AngleSharp.xml",
         "logo.png"
+      ]
+    },
+    "AspectInjector/2.8.1": {
+      "sha512": "8BScDeaLazJVFaa2Tt9hoWLhllnxXP3Sew+l/vktdZEcgoPOsqhlDqe6GXJvy7xVkdICAbKFsrcDJ0cfrDR6Mg==",
+      "type": "package",
+      "path": "aspectinjector/2.8.1",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "analyzers/dotnet/cs/AspectInjector.Analyzer.dll",
+        "analyzers/dotnet/cs/AspectInjector.Broker.dll",
+        "analyzers/dotnet/cs/AspectInjector.Rules.dll",
+        "analyzers/dotnet/cs/FluentIL.Common.dll",
+        "aspectinjector.2.8.1.nupkg.sha512",
+        "aspectinjector.nuspec",
+        "build/_bin/linux-arm64/AspectInjector",
+        "build/_bin/linux-musl-arm64/AspectInjector",
+        "build/_bin/linux-musl-x64/AspectInjector",
+        "build/_bin/linux-x64/AspectInjector",
+        "build/_bin/osx-arm64/AspectInjector",
+        "build/_bin/osx-x64/AspectInjector",
+        "build/_bin/win-arm64/AspectInjector.exe",
+        "build/_bin/win-x64/AspectInjector.exe",
+        "build/netstandard2.0/AspectInjector.targets",
+        "buildTransitive/netstandard2.0/AspectInjector.targets",
+        "lib/netstandard2.0/AspectInjector.Broker.dll",
+        "lib/netstandard2.0/AspectInjector.Broker.xml",
+        "package.png",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
@@ -751,6 +919,150 @@
         "version.txt"
       ]
     },
+    "MimeTypesMap/1.0.8": {
+      "sha512": "iOm6Zar+yVROhlyrGGSJTfThvNoHLUeYeQQND9YD/ot/nA2qsWUp9kP2MHTdF9P7I8afW6eCf8vdELLZjDFdSQ==",
+      "type": "package",
+      "path": "mimetypesmap/1.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/MimeTypesMap.dll",
+        "lib/netstandard1.1/MimeTypesMap.dll",
+        "lib/netstandard2.0/MimeTypesMap.dll",
+        "mimetypesmap.1.0.8.nupkg.sha512",
+        "mimetypesmap.nuspec"
+      ]
+    },
+    "NETStandard.Library/2.0.0": {
+      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "type": "package",
+      "path": "netstandard.library/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "build/NETStandard.Library.targets",
+        "build/netstandard2.0/NETStandard.Library.targets",
+        "build/netstandard2.0/ref/Microsoft.Win32.Primitives.dll",
+        "build/netstandard2.0/ref/System.AppContext.dll",
+        "build/netstandard2.0/ref/System.Collections.Concurrent.dll",
+        "build/netstandard2.0/ref/System.Collections.NonGeneric.dll",
+        "build/netstandard2.0/ref/System.Collections.Specialized.dll",
+        "build/netstandard2.0/ref/System.Collections.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Composition.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.EventBasedAsync.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.Primitives.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.TypeConverter.dll",
+        "build/netstandard2.0/ref/System.ComponentModel.dll",
+        "build/netstandard2.0/ref/System.Console.dll",
+        "build/netstandard2.0/ref/System.Core.dll",
+        "build/netstandard2.0/ref/System.Data.Common.dll",
+        "build/netstandard2.0/ref/System.Data.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Contracts.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Debug.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.FileVersionInfo.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Process.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.StackTrace.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TextWriterTraceListener.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tools.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.TraceSource.dll",
+        "build/netstandard2.0/ref/System.Diagnostics.Tracing.dll",
+        "build/netstandard2.0/ref/System.Drawing.Primitives.dll",
+        "build/netstandard2.0/ref/System.Drawing.dll",
+        "build/netstandard2.0/ref/System.Dynamic.Runtime.dll",
+        "build/netstandard2.0/ref/System.Globalization.Calendars.dll",
+        "build/netstandard2.0/ref/System.Globalization.Extensions.dll",
+        "build/netstandard2.0/ref/System.Globalization.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.ZipFile.dll",
+        "build/netstandard2.0/ref/System.IO.Compression.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.DriveInfo.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Primitives.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.Watcher.dll",
+        "build/netstandard2.0/ref/System.IO.FileSystem.dll",
+        "build/netstandard2.0/ref/System.IO.IsolatedStorage.dll",
+        "build/netstandard2.0/ref/System.IO.MemoryMappedFiles.dll",
+        "build/netstandard2.0/ref/System.IO.Pipes.dll",
+        "build/netstandard2.0/ref/System.IO.UnmanagedMemoryStream.dll",
+        "build/netstandard2.0/ref/System.IO.dll",
+        "build/netstandard2.0/ref/System.Linq.Expressions.dll",
+        "build/netstandard2.0/ref/System.Linq.Parallel.dll",
+        "build/netstandard2.0/ref/System.Linq.Queryable.dll",
+        "build/netstandard2.0/ref/System.Linq.dll",
+        "build/netstandard2.0/ref/System.Net.Http.dll",
+        "build/netstandard2.0/ref/System.Net.NameResolution.dll",
+        "build/netstandard2.0/ref/System.Net.NetworkInformation.dll",
+        "build/netstandard2.0/ref/System.Net.Ping.dll",
+        "build/netstandard2.0/ref/System.Net.Primitives.dll",
+        "build/netstandard2.0/ref/System.Net.Requests.dll",
+        "build/netstandard2.0/ref/System.Net.Security.dll",
+        "build/netstandard2.0/ref/System.Net.Sockets.dll",
+        "build/netstandard2.0/ref/System.Net.WebHeaderCollection.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.Client.dll",
+        "build/netstandard2.0/ref/System.Net.WebSockets.dll",
+        "build/netstandard2.0/ref/System.Net.dll",
+        "build/netstandard2.0/ref/System.Numerics.dll",
+        "build/netstandard2.0/ref/System.ObjectModel.dll",
+        "build/netstandard2.0/ref/System.Reflection.Extensions.dll",
+        "build/netstandard2.0/ref/System.Reflection.Primitives.dll",
+        "build/netstandard2.0/ref/System.Reflection.dll",
+        "build/netstandard2.0/ref/System.Resources.Reader.dll",
+        "build/netstandard2.0/ref/System.Resources.ResourceManager.dll",
+        "build/netstandard2.0/ref/System.Resources.Writer.dll",
+        "build/netstandard2.0/ref/System.Runtime.CompilerServices.VisualC.dll",
+        "build/netstandard2.0/ref/System.Runtime.Extensions.dll",
+        "build/netstandard2.0/ref/System.Runtime.Handles.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "build/netstandard2.0/ref/System.Runtime.InteropServices.dll",
+        "build/netstandard2.0/ref/System.Runtime.Numerics.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Formatters.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Json.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Primitives.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.Xml.dll",
+        "build/netstandard2.0/ref/System.Runtime.Serialization.dll",
+        "build/netstandard2.0/ref/System.Runtime.dll",
+        "build/netstandard2.0/ref/System.Security.Claims.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Algorithms.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Csp.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Encoding.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.Primitives.dll",
+        "build/netstandard2.0/ref/System.Security.Cryptography.X509Certificates.dll",
+        "build/netstandard2.0/ref/System.Security.Principal.dll",
+        "build/netstandard2.0/ref/System.Security.SecureString.dll",
+        "build/netstandard2.0/ref/System.ServiceModel.Web.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.Extensions.dll",
+        "build/netstandard2.0/ref/System.Text.Encoding.dll",
+        "build/netstandard2.0/ref/System.Text.RegularExpressions.dll",
+        "build/netstandard2.0/ref/System.Threading.Overlapped.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.Parallel.dll",
+        "build/netstandard2.0/ref/System.Threading.Tasks.dll",
+        "build/netstandard2.0/ref/System.Threading.Thread.dll",
+        "build/netstandard2.0/ref/System.Threading.ThreadPool.dll",
+        "build/netstandard2.0/ref/System.Threading.Timer.dll",
+        "build/netstandard2.0/ref/System.Threading.dll",
+        "build/netstandard2.0/ref/System.Transactions.dll",
+        "build/netstandard2.0/ref/System.ValueTuple.dll",
+        "build/netstandard2.0/ref/System.Web.dll",
+        "build/netstandard2.0/ref/System.Windows.dll",
+        "build/netstandard2.0/ref/System.Xml.Linq.dll",
+        "build/netstandard2.0/ref/System.Xml.ReaderWriter.dll",
+        "build/netstandard2.0/ref/System.Xml.Serialization.dll",
+        "build/netstandard2.0/ref/System.Xml.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.XDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XPath.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlDocument.dll",
+        "build/netstandard2.0/ref/System.Xml.XmlSerializer.dll",
+        "build/netstandard2.0/ref/System.Xml.dll",
+        "build/netstandard2.0/ref/System.dll",
+        "build/netstandard2.0/ref/mscorlib.dll",
+        "build/netstandard2.0/ref/netstandard.dll",
+        "build/netstandard2.0/ref/netstandard.xml",
+        "lib/netstandard1.0/_._",
+        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.nuspec"
+      ]
+    },
     "Newtonsoft.Json/13.0.1": {
       "sha512": "ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "type": "package",
@@ -800,6 +1112,45 @@
         "lib/netstandard2.0/NLog.xml",
         "nlog.5.1.2.nupkg.sha512",
         "nlog.nuspec"
+      ]
+    },
+    "NUnit/3.13.3": {
+      "sha512": "KNPDpls6EfHwC3+nnA67fh5wpxeLb3VLFAfLxrug6JMYDLHH6InaQIWR7Sc3y75d/9IKzMksH/gi08W7XWbmnQ==",
+      "type": "package",
+      "path": "nunit/3.13.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "build/NUnit.props",
+        "icon.png",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard2.0/nunit.framework.dll",
+        "lib/netstandard2.0/nunit.framework.xml",
+        "nunit.3.13.3.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "NUnit.Engine.Api/3.15.2": {
+      "sha512": "f9fFpqSARUxu58dsWrmI91CUbg8TDBSi/b+bgXZkmZSrh/5VlBiGHgtEWQnIg75hlLyJGYufU9H2tKk9joMXww==",
+      "type": "package",
+      "path": "nunit.engine.api/3.15.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "images/nunit_256.png",
+        "lib/net20/nunit.engine.api.dll",
+        "lib/netstandard2.0/nunit.engine.api.dll",
+        "nunit.engine.api.3.15.2.nupkg.sha512",
+        "nunit.engine.api.nuspec"
       ]
     },
     "Selenium.Support/4.8.1": {
@@ -1189,6 +1540,8 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Allure.NUnit >= 2.9.4-preview.6",
+      "NUnit >= 3.13.3",
       "Saucedemo.Core >= 1.0.0"
     ]
   },
@@ -1239,6 +1592,16 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
+        "dependencies": {
+          "Allure.NUnit": {
+            "target": "Package",
+            "version": "[2.9.4-preview.6, )"
+          },
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.13.3, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

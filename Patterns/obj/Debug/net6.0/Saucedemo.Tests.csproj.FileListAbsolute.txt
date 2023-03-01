@@ -123,3 +123,7 @@ C:\Users\Azizbek\Desktop\DemoSolution\Patterns\obj\Debug\net6.0\refint\Saucedemo
 C:\Users\Azizbek\Desktop\DemoSolution\Patterns\obj\Debug\net6.0\Saucedemo.Tests.pdb
 C:\Users\Azizbek\Desktop\DemoSolution\Patterns\obj\Debug\net6.0\Saucedemo.Tests.genruntimeconfig.cache
 C:\Users\Azizbek\Desktop\DemoSolution\Patterns\obj\Debug\net6.0\ref\Saucedemo.Tests.dll
+C:\Users\Azizbek\Desktop\DemoSolution\Patterns\bin\Debug\net6.0\Allure.Net.Commons.dll
+C:\Users\Azizbek\Desktop\DemoSolution\Patterns\bin\Debug\net6.0\Allure.NUnit.dll
+C:\Users\Azizbek\Desktop\DemoSolution\Patterns\bin\Debug\net6.0\AspectInjector.Broker.dll
+C:\Users\Azizbek\Desktop\DemoSolution\Patterns\bin\Debug\net6.0\MimeTypesMap.dll

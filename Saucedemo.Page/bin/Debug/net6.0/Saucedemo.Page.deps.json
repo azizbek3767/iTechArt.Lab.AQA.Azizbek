@@ -8,10 +8,38 @@
     ".NETCoreApp,Version=v6.0": {
       "Saucedemo.Page/1.0.0": {
         "dependencies": {
+          "Allure.NUnit": "2.9.4-preview.6",
+          "NUnit": "3.13.3",
           "Saucedemo.Core": "1.0.0"
         },
         "runtime": {
           "Saucedemo.Page.dll": {}
+        }
+      },
+      "Allure.Net.Commons/2.9.4-preview.6": {
+        "dependencies": {
+          "MimeTypesMap": "1.0.8",
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Allure.Net.Commons.dll": {
+            "assemblyVersion": "2.9.4.0",
+            "fileVersion": "2.9.4.0"
+          }
+        }
+      },
+      "Allure.NUnit/2.9.4-preview.6": {
+        "dependencies": {
+          "Allure.Net.Commons": "2.9.4-preview.6",
+          "AspectInjector": "2.8.1",
+          "NUnit": "3.13.3",
+          "NUnit.Engine.Api": "3.15.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Allure.NUnit.dll": {
+            "assemblyVersion": "2.9.4.0",
+            "fileVersion": "2.9.4.0"
+          }
         }
       },
       "AngleSharp/0.17.1": {
@@ -23,6 +51,14 @@
           "lib/netstandard2.0/AngleSharp.dll": {
             "assemblyVersion": "0.17.1.0",
             "fileVersion": "0.17.1.0"
+          }
+        }
+      },
+      "AspectInjector/2.8.1": {
+        "runtime": {
+          "lib/netstandard2.0/AspectInjector.Broker.dll": {
+            "assemblyVersion": "2.8.1.0",
+            "fileVersion": "2.8.1.0"
           }
         }
       },
@@ -129,6 +165,19 @@
           "System.Security.Principal.Windows": "5.0.0"
         }
       },
+      "MimeTypesMap/1.0.8": {
+        "runtime": {
+          "lib/netstandard2.0/MimeTypesMap.dll": {
+            "assemblyVersion": "1.0.8.0",
+            "fileVersion": "1.0.8.0"
+          }
+        }
+      },
+      "NETStandard.Library/2.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "5.0.0"
+        }
+      },
       "Newtonsoft.Json/13.0.1": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -142,6 +191,25 @@
           "lib/netstandard2.0/NLog.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.1.2.1561"
+          }
+        }
+      },
+      "NUnit/3.13.3": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {
+            "assemblyVersion": "3.13.3.0",
+            "fileVersion": "3.13.3.0"
+          }
+        }
+      },
+      "NUnit.Engine.Api/3.15.2": {
+        "runtime": {
+          "lib/netstandard2.0/nunit.engine.api.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.99.0.0"
           }
         }
       },
@@ -254,12 +322,33 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Allure.Net.Commons/2.9.4-preview.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vI/KByUGYsPeJnTHCmMDoHpYNDN71wSMAv9erS0vlDn63Mx8Wa8oVFeEHQWHY4AiZWab3r8dA5CORpHF5TDAVA==",
+      "path": "allure.net.commons/2.9.4-preview.6",
+      "hashPath": "allure.net.commons.2.9.4-preview.6.nupkg.sha512"
+    },
+    "Allure.NUnit/2.9.4-preview.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ac3M3/ZcPaz40FxmJKufA3qp8JnEtEAQOjPegtuUHADiXmwnh6iCw7FdAMU9PM9vZEkmOi+F5LzwGL7JsXe+3g==",
+      "path": "allure.nunit/2.9.4-preview.6",
+      "hashPath": "allure.nunit.2.9.4-preview.6.nupkg.sha512"
+    },
     "AngleSharp/0.17.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-5MPI4bbixlwxb0W/smOMeIR+QlxMy5/5jD+WnIAw4pBC+7AhLPe5bS3cLgQMJyvd6q0A48sG+uYOt/ep406GLA==",
       "path": "anglesharp/0.17.1",
       "hashPath": "anglesharp.0.17.1.nupkg.sha512"
+    },
+    "AspectInjector/2.8.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8BScDeaLazJVFaa2Tt9hoWLhllnxXP3Sew+l/vktdZEcgoPOsqhlDqe6GXJvy7xVkdICAbKFsrcDJ0cfrDR6Mg==",
+      "path": "aspectinjector/2.8.1",
+      "hashPath": "aspectinjector.2.8.1.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
       "type": "package",
@@ -331,6 +420,20 @@
       "path": "microsoft.win32.registry/5.0.0",
       "hashPath": "microsoft.win32.registry.5.0.0.nupkg.sha512"
     },
+    "MimeTypesMap/1.0.8": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iOm6Zar+yVROhlyrGGSJTfThvNoHLUeYeQQND9YD/ot/nA2qsWUp9kP2MHTdF9P7I8afW6eCf8vdELLZjDFdSQ==",
+      "path": "mimetypesmap/1.0.8",
+      "hashPath": "mimetypesmap.1.0.8.nupkg.sha512"
+    },
+    "NETStandard.Library/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+      "path": "netstandard.library/2.0.0",
+      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
+    },
     "Newtonsoft.Json/13.0.1": {
       "type": "package",
       "serviceable": true,
@@ -344,6 +447,20 @@
       "sha512": "sha512-JfQY93ure3IPVTN3eabBewBGvrcXcWIlaesFEXdy5UzIymfIT9yCgLISYtM0cOhjWziIaUr/6Z9NC2RwtjwrsQ==",
       "path": "nlog/5.1.2",
       "hashPath": "nlog.5.1.2.nupkg.sha512"
+    },
+    "NUnit/3.13.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-KNPDpls6EfHwC3+nnA67fh5wpxeLb3VLFAfLxrug6JMYDLHH6InaQIWR7Sc3y75d/9IKzMksH/gi08W7XWbmnQ==",
+      "path": "nunit/3.13.3",
+      "hashPath": "nunit.3.13.3.nupkg.sha512"
+    },
+    "NUnit.Engine.Api/3.15.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f9fFpqSARUxu58dsWrmI91CUbg8TDBSi/b+bgXZkmZSrh/5VlBiGHgtEWQnIg75hlLyJGYufU9H2tKk9joMXww==",
+      "path": "nunit.engine.api/3.15.2",
+      "hashPath": "nunit.engine.api.3.15.2.nupkg.sha512"
     },
     "Selenium.Support/4.8.1": {
       "type": "package",

@@ -46,11 +46,17 @@ added methods to interact with those buttons. Then, I created a separate test cl
 and inside this class checked all the four buttons of the sidebar for correctly functioning.
 # example
 private Button AllItemsButton => new Button(By.XPath("//a[@id=\"inventory_sidebar_link\"]"), "All items button");
-        
 public void ClickAllItemsButton()
 {
     AllItemsButton.Click();
 }
-
 InventoryPage.LeftSidebarComponent.ClickAllItemsButton();
+
+# Value Object
+In this project, I used this pattern to fill the Checkout form for user data. I created CheckoutUserRequestModel and 
+CheckoutUserRequestModelFactory. So I can hide the real implmentation.
+
+# Steps (Actor)
+In this project, I used this pattern to make a checkout operation. I have created a Steps folder and CheckoutStepOnePageSteps class.
+And, created a separate test class called CheckoutTests_Via_Steps_Pattern and chained my tests in that class.
 

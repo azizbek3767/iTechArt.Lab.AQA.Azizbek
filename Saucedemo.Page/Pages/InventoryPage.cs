@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using Saucedemo.Core.Elements;
 using Saucedemo.Page.Locators;
 
@@ -18,14 +19,19 @@ namespace Saucedemo.Page.Pages
         private Button SecondItemAddToCartButton => new(InventoryPageLocators.SecondItemAddToCartButtonLocator, "Second Item AddToCart Button");
         private Label TopCartIconBadgeNumberLabel => new(InventoryPageLocators.TopCartIconBadgeNumberLocator, "Top Cart Icon Badge Number Label");
 
+        [AllureStep("Click Menu Burger Button")]
         public void ClickMenuBurgerButton()
         {
             BurgerMenuButton.Click();
         }
+
+        [AllureStep("Click Top Cart Button")]
         public void ClickTopCartButton()
         {
             TopCartIconBadgeNumberLabel.Click();
         }
+
+        [AllureStep("Add Some Items To The Cart")]
         public void AddSomeItemsToTheCart()
         {
             FirstItemAddToCartButton.Click();

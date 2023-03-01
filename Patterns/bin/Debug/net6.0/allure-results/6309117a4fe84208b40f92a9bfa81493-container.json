@@ -1,0 +1,12 @@
+{
+  "uuid": "31dc30a7-0a4f-4900-a785-1d3ade7bead7-tc-0-1000",
+  "name": "Saucedemo.Tests.Unit.Tests.ChainOfInvocationPatternTests.Checkout_Tests_Via_Chain_Of_Invocation_Pattern",
+  "children": [
+    "1207e875-c878-4483-9fc1-0a7cd7c1db61-tr-0-1001"
+  ],
+  "befores": [],
+  "afters": [],
+  "links": [],
+  "start": 1677660885614,
+  "stop": 1677660896443
+}

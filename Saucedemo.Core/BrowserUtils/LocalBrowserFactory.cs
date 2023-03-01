@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using Saucedemo.Core.Utilities;
 using System.ComponentModel;
 using WebDriverManager.DriverConfigs.Impl;
 
@@ -18,6 +19,7 @@ namespace Saucedemo.Core.BrowserUtils
                 var browserName = BrowserProfile.BrowserName;
                 var driverSettings = BrowserProfile.DriverSettings;
                 WebDriver webDriver;
+                Logger.Instance.Debug($"Start browser '{browserName}'");
 
                 switch (browserName)
                 {

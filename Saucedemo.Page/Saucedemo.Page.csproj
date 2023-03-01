@@ -7,6 +7,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Allure.NUnit" Version="2.9.4-preview.6" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Saucedemo.Core\Saucedemo.Core.csproj" />
   </ItemGroup>
 

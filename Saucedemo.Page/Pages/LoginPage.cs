@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Allure.Attributes;
+using OpenQA.Selenium;
 using Saucedemo.Core.Builders;
 using Saucedemo.Core.Elements;
 using Saucedemo.Core.Extensions;
@@ -15,10 +16,12 @@ namespace Saucedemo.Page.Pages
         protected override By UniqueWebLocator => By.XPath("//div[@class=\"login_logo\"]");
 
         protected override string UrlPath => string.Empty;
-        private Input UsernameInput => new (LoginPageLocators.UsernameInputLocator, "Username input");
-        private Input PasswordInput => new (LoginPageLocators.PasswordInputLocator, "Password input");
-        private Button LoginButton => new (LoginPageLocators.LoginButtonLocator, "Login Button");
+        public Input UsernameInput => new (LoginPageLocators.UsernameInputLocator, "Username input");
+        public Input PasswordInput => new (LoginPageLocators.PasswordInputLocator, "Password input");
+        public Button LoginButton => new (LoginPageLocators.LoginButtonLocator, "Login Button");
         private Label LockedOutUserErrorMessage => new (LoginPageLocators.LockedOutUserErrorMessageLocator, "Locked Out User Error Message");
+
+        [AllureStep("Log in as a particular user")]
         public void LoginAsA(string userType)
         {
             var director = new UserBuilderDirector();
