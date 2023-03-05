@@ -3,9 +3,9 @@
     public class CalculatorFixture : IDisposable
     {
         public Calculator Calculator;
-        public CalculatorFixture()
+        public CalculatorFixture(Calculator calculator)
         {
-            Calculator = new Calculator();
+            Calculator = calculator;
         }
 
         public void Dispose()

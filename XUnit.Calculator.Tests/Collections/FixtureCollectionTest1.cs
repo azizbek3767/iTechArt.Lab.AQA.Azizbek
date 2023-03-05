@@ -1,11 +1,12 @@
-﻿namespace XUnit.Calculator.Tests.Tests
+﻿using XUnit.Calculator.Tests.Tests;
+
+namespace XUnit.Calculator.Tests.Collections
 {
-    [CollectionDefinition("parallelization disabled", DisableParallelization =true)]
-    [Collection("parallelization disabled")]
-    public class FixtureTestsDemo : IClassFixture<CalculatorFixture>
+    [Collection("DemoCollection")]
+    public class FixtureCollectionTest1
     {
         private readonly CalculatorFixture _calculatorFixture;
-        public FixtureTestsDemo(CalculatorFixture calculatorFixture)
+        public FixtureCollectionTest1(CalculatorFixture calculatorFixture)
         {
             _calculatorFixture = calculatorFixture;
         }

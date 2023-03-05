@@ -1,27 +1,13 @@
-﻿/*using System.Collections;
-using Xunit.Abstractions;
+﻿using System.Collections;
 
 namespace XUnit.Calculator.Tests.Tests
 {
-    public class UnitTests : IDisposable, IClassFixture<CalculatorFixture>
+    public class DemoTests : IDisposable, IClassFixture<CalculatorFixture>
     {
-        private readonly ITestOutputHelper _testOutputHelper;
         private Calculator _calculator;
-        public UnitTests(ITestOutputHelper testOutputHelper)
+        public DemoTests(Calculator calculator)
         {
-            _testOutputHelper= testOutputHelper;
-            _calculator= new Calculator();
-        }
-
-        [Fact(Skip = "ignored test")]
-        public void Ignored_Test()
-        {
-            Console.WriteLine("Ignored test");
-        }
-
-        public void LoggingTest()
-        {
-            _testOutputHelper.WriteLine("Calculator tests started");
+            _calculator = calculator;
         }
 
         [Theory]
@@ -30,7 +16,6 @@ namespace XUnit.Calculator.Tests.Tests
         {
             var result = _calculator.Sum(firstNumber, secondNumber);
             Assert.Equal(expectedResult, result);
-            _testOutputHelper.WriteLine($"Sum of {firstNumber} and {secondNumber} is {result}");
         }
 
         [Theory]
@@ -47,10 +32,9 @@ namespace XUnit.Calculator.Tests.Tests
         {
             var result = _calculator.Sum(firstNumber, secondNumber);
             Assert.Equal(8, result);
-            _testOutputHelper.WriteLine($"Sum of {firstNumber} and {secondNumber} is {result}");
         }
 
-        [Theory,InlineData(-2, -18, -20)]
+        [Theory, InlineData(-2, -18, -20)]
         public void SumValues_WhenNegativeValidData_ShouldReturnCorrectly(int firstNumber, int secondNumber, int expectedResult)
         {
             var result = _calculator.Sum(firstNumber, secondNumber);
@@ -62,7 +46,6 @@ namespace XUnit.Calculator.Tests.Tests
         {
             var result = _calculator.Subtract(10, 2);
             Assert.Equal(8, result);
-            _testOutputHelper.WriteLine($"Subrtaction of 10 and 2 is {result}");
         }
 
         [Fact]
@@ -134,4 +117,3 @@ namespace XUnit.Calculator.Tests.Tests
             };
     }
 }
-*/
