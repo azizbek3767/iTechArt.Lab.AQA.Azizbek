@@ -1,0 +1,4 @@
+{
+
+}
+[{"FirstName":"Azizbek","LastName":"Nasriddinov","Age":"22","RecordsAmount":[12,13,14],"IsMale":true,"WalletAmount":12000.0,"FavouriteSongs":["song 1","song 2","song 3"]},{"FirstName":"Azizbek2","LastName":"Nasriddinov2","Age":"23","RecordsAmount":[11,22,33],"IsMale":true,"WalletAmount":11000.0,"FavouriteSongs":["song 1","song 2","song 3"]},{"FirstName":"Azizbek3","LastName":"Nasriddinov3","Age":"24","RecordsAmount":[44,55,66],"IsMale":true,"WalletAmount":10000.0,"FavouriteSongs":["song 1","song 2","song 3"]}]

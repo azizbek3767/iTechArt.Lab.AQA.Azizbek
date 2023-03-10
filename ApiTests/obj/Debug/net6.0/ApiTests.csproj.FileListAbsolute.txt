@@ -98,3 +98,9 @@ C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\obj\Debug\net6.0\refint\ApiTests.
 C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\obj\Debug\net6.0\ApiTests.pdb
 C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\obj\Debug\net6.0\ApiTests.genruntimeconfig.cache
 C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\obj\Debug\net6.0\ref\ApiTests.dll
+C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\bin\Debug\net6.0\Nancy.dll
+C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\bin\Debug\net6.0\Vse.Web.Serialization.dll
+C:\Users\Azizbek\Desktop\DemoSolution\ApiTests\bin\Debug\net6.0\Data\users.json
